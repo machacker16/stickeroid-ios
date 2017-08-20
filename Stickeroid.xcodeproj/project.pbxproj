@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7527EE7C1F2CA9340031383A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7527EE7B1F2CA9340031383A /* AppDelegate.swift */; };
+		7527EE7E1F2CA9340031383A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7527EE7D1F2CA9340031383A /* ViewController.swift */; };
+		7550B1E21F31A6BB00DE7186 /* STConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E11F31A6BB00DE7186 /* STConstants.swift */; };
+		7550B1E41F31A74C00DE7186 /* STRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E31F31A74C00DE7186 /* STRequest.swift */; };
+		7550B1E61F31A78200DE7186 /* STButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E51F31A78200DE7186 /* STButton.swift */; };
+		7550B1EA1F33CA6D00DE7186 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E91F33CA6D00DE7186 /* GCD.swift */; };
+		7550B1F61F346A9E00DE7186 /* logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 7550B1F31F346A9E00DE7186 /* logo_text.png */; };
+		7550B1F71F346A9E00DE7186 /* stickeroid_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7550B1F41F346A9E00DE7186 /* stickeroid_logo.png */; };
+		7550B1FA1F346ABA00DE7186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7550B1F81F346ABA00DE7186 /* LaunchScreen.storyboard */; };
+		7550B1FD1F346ABE00DE7186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7550B1FB1F346ABE00DE7186 /* Main.storyboard */; };
+		7550B2051F35144000DE7186 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7550B2041F35144000DE7186 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7527EE781F2CA9340031383A /* Stickeroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stickeroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7527EE7B1F2CA9340031383A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7527EE7D1F2CA9340031383A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7527EE871F2CA9340031383A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7550B1E11F31A6BB00DE7186 /* STConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STConstants.swift; sourceTree = "<group>"; };
+		7550B1E31F31A74C00DE7186 /* STRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRequest.swift; sourceTree = "<group>"; };
+		7550B1E51F31A78200DE7186 /* STButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STButton.swift; sourceTree = "<group>"; };
+		7550B1E91F33CA6D00DE7186 /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		7550B1F31F346A9E00DE7186 /* logo_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_text.png; sourceTree = "<group>"; };
+		7550B1F41F346A9E00DE7186 /* stickeroid_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickeroid_logo.png; sourceTree = "<group>"; };
+		7550B1F91F346ABA00DE7186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7550B1FC1F346ABE00DE7186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7550B2041F35144000DE7186 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7527EE751F2CA9340031383A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7527EE6F1F2CA9340031383A = {
+			isa = PBXGroup;
+			children = (
+				7527EE7A1F2CA9340031383A /* Stickeroid */,
+				7527EE791F2CA9340031383A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7527EE791F2CA9340031383A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7527EE781F2CA9340031383A /* Stickeroid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7527EE7A1F2CA9340031383A /* Stickeroid */ = {
+			isa = PBXGroup;
+			children = (
+				7527EE8F1F2E4F300031383A /* View */,
+				7527EE901F2E4F3E0031383A /* Controller */,
+				7527EE911F2E4F450031383A /* Model */,
+				7527EE7B1F2CA9340031383A /* AppDelegate.swift */,
+				7550B1E81F31BB5700DE7186 /* Supporting Files */,
+				7550B1F11F346A8300DE7186 /* Assets */,
+			);
+			path = Stickeroid;
+			sourceTree = "<group>";
+		};
+		7527EE8F1F2E4F300031383A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7550B1E51F31A78200DE7186 /* STButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7527EE901F2E4F3E0031383A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7527EE7D1F2CA9340031383A /* ViewController.swift */,
+				7550B1E91F33CA6D00DE7186 /* GCD.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7527EE911F2E4F450031383A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7550B1E11F31A6BB00DE7186 /* STConstants.swift */,
+				7550B1E31F31A74C00DE7186 /* STRequest.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7550B1E81F31BB5700DE7186 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7527EE871F2CA9340031383A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7550B1F11F346A8300DE7186 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7550B1F31F346A9E00DE7186 /* logo_text.png */,
+				7550B1F81F346ABA00DE7186 /* LaunchScreen.storyboard */,
+				7550B1FB1F346ABE00DE7186 /* Main.storyboard */,
+				7550B1F41F346A9E00DE7186 /* stickeroid_logo.png */,
+				7550B2041F35144000DE7186 /* Images.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7527EE771F2CA9340031383A /* Stickeroid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7527EE8A1F2CA9340031383A /* Build configuration list for PBXNativeTarget "Stickeroid" */;
+			buildPhases = (
+				7527EE741F2CA9340031383A /* Sources */,
+				7527EE751F2CA9340031383A /* Frameworks */,
+				7527EE761F2CA9340031383A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stickeroid;
+			productName = Stickeroid;
+			productReference = 7527EE781F2CA9340031383A /* Stickeroid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7527EE701F2CA9340031383A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Vadym Sidorov";
+				TargetAttributes = {
+					7527EE771F2CA9340031383A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = HWKNWLSN4R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7527EE731F2CA9340031383A /* Build configuration list for PBXProject "Stickeroid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7527EE6F1F2CA9340031383A;
+			productRefGroup = 7527EE791F2CA9340031383A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7527EE771F2CA9340031383A /* Stickeroid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7527EE761F2CA9340031383A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7550B1FD1F346ABE00DE7186 /* Main.storyboard in Resources */,
+				7550B2051F35144000DE7186 /* Images.xcassets in Resources */,
+				7550B1FA1F346ABA00DE7186 /* LaunchScreen.storyboard in Resources */,
+				7550B1F71F346A9E00DE7186 /* stickeroid_logo.png in Resources */,
+				7550B1F61F346A9E00DE7186 /* logo_text.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7527EE741F2CA9340031383A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7550B1EA1F33CA6D00DE7186 /* GCD.swift in Sources */,
+				7527EE7E1F2CA9340031383A /* ViewController.swift in Sources */,
+				7550B1E41F31A74C00DE7186 /* STRequest.swift in Sources */,
+				7527EE7C1F2CA9340031383A /* AppDelegate.swift in Sources */,
+				7550B1E61F31A78200DE7186 /* STButton.swift in Sources */,
+				7550B1E21F31A6BB00DE7186 /* STConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7550B1F81F346ABA00DE7186 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7550B1F91F346ABA00DE7186 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7550B1FB1F346ABE00DE7186 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7550B1FC1F346ABE00DE7186 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7527EE881F2CA9340031383A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7527EE891F2CA9340031383A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7527EE8B1F2CA9340031383A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HWKNWLSN4R;
+				INFOPLIST_FILE = Stickeroid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = stickeroid.la4ce.Stickeroid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7527EE8C1F2CA9340031383A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HWKNWLSN4R;
+				INFOPLIST_FILE = Stickeroid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = stickeroid.la4ce.Stickeroid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7527EE731F2CA9340031383A /* Build configuration list for PBXProject "Stickeroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7527EE881F2CA9340031383A /* Debug */,
+				7527EE891F2CA9340031383A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7527EE8A1F2CA9340031383A /* Build configuration list for PBXNativeTarget "Stickeroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7527EE8B1F2CA9340031383A /* Debug */,
+				7527EE8C1F2CA9340031383A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7527EE701F2CA9340031383A /* Project object */;
+}

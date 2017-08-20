@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stickeroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search:" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-XK-pMo">
+                                <rect key="frame" x="41" y="96" width="332" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.17999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="performResourceSearch:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="L4n-O5-RRT"/>
+                                    <action selector="performResourceSearch:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Pwt-T6-8fl"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="hU4-hZ-CIK">
+                                <rect key="frame" x="0.0" y="28" width="414" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hU4-hZ-CIK" secondAttribute="height" multiplier="8:1" id="L6y-EQ-2MV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-MV-Hv9">
+                                <rect key="frame" x="0.0" y="230" width="414" height="276"/>
+                                <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dxU-MV-Hv9" secondAttribute="height" multiplier="3:2" id="wbk-Ni-jpg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXK-Yb-uSS">
+                                <rect key="frame" x="124" y="625" width="166" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EXK-Yb-uSS" secondAttribute="height" multiplier="3:1" id="Vj6-y3-mtC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="requestNextResource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0sP-5p-1um"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uAg-XK-pMo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="0Ep-ij-iDh"/>
+                            <constraint firstItem="dxU-MV-Hv9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7p6-5x-QhK"/>
+                            <constraint firstItem="hU4-hZ-CIK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="AFo-Hb-E6i"/>
+                            <constraint firstItem="dxU-MV-Hv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hpy-Bd-3Je"/>
+                            <constraint firstItem="EXK-Yb-uSS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="JgH-F6-lTr"/>
+                            <constraint firstItem="hU4-hZ-CIK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="M9G-CK-z1O"/>
+                            <constraint firstItem="EXK-Yb-uSS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXd-xg-xE8"/>
+                            <constraint firstItem="uAg-XK-pMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TKv-Lq-5iq"/>
+                            <constraint firstItem="hU4-hZ-CIK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ya5-NY-dGe"/>
+                            <constraint firstItem="dxU-MV-Hv9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="pzS-we-tnd"/>
+                            <constraint firstItem="uAg-XK-pMo" firstAttribute="top" secondItem="hU4-hZ-CIK" secondAttribute="bottom" constant="16" id="vaG-Lx-vwi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EXK-Yb-uSS" secondAttribute="bottom" constant="56" id="xSM-Ua-Sz1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ResourceView" destination="dxU-MV-Hv9" id="kpi-jY-CDn"/>
+                        <outlet property="resourceView" destination="dxU-MV-Hv9" id="Ykd-LR-WnA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114.40000000000001" y="139.880059970015"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_text.png" width="400" height="106"/>
+    </resources>
+</document>
