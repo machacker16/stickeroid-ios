@@ -16,6 +16,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     let requestInstance = STRequest()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let stickeroidLogoImage = #imageLiteral(resourceName: "logo_text.png")
+        addNavigationBarImage(stickeroidLogoImage)
+    }
+    
+    func addNavigationBarImage(_ image: UIImage) {
+        let IMAGE_SIZE_COEFF = CGFloat(0.88)
+        
+        let imageView = UIImageView(image: image)
+        let navController = navigationController!
+        
+        let frameWidth = navController.navigationBar.frame.size.width * IMAGE_SIZE_COEFF
+        let frameHeight = navController.navigationBar.frame.size.height * IMAGE_SIZE_COEFF
+        let frameSize = CGSize(width: frameWidth, height: frameHeight)
+
+        let frameOriginX = frameSize.width / 2 - image.size.width / 2
+        let frameOriginY = frameSize.height / 2 - image.size.height / 2
+        let frameOriginXY = CGPoint(x: frameOriginX, y: frameOriginY)
+        
+        imageView.frame = CGRect(origin: frameOriginXY, size: frameSize)
+        imageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = imageView
+    }
+    
     @IBAction func performResourceSearch(_ sender: UITextField) {
         
         guard let searchQuery = sender.text else {
