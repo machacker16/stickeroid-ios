@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        scrollView.setContentOffset(CGPoint(x: 0, y: 250), animated: true)
+        scrollView.setContentOffset(CGPoint(x: 0, y: 260), animated: true)
         //scrollView.contentInset = UIEdgeInsetsMake(0, 0, 250, 0)
     }
     
