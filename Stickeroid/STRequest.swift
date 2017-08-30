@@ -25,11 +25,28 @@ class STRequest {
             return
         }
         
-        let requestUrl = STRequest.buildResourceRequestUrl(searchQuery: searchQuery, isNextResourceRequest: true)!
+        let nextRequestParams = [
+            STConstants.RequestKeys.NextQuery: STConstants.RequestValues.NextQuery
+        ]
+        let requestUrl = STRequest.buildResourceRequestUrl(searchQuery: searchQuery, additionalParams: nextRequestParams)!
         
         getResourceByUrl(requestUrl, callback: callback);
     }
 
+    func getPreviousResourceFromLastSession(callback: @escaping (_ data: Data?) -> Void) {
+        guard let searchQuery = lastSearchQuery else {
+            print("Can't get previous resource: no search was performed before.")
+            return
+        }
+        
+        let previousRequestParams = [
+            STConstants.RequestKeys.PreviousQuery: STConstants.RequestValues.PreviousQuery
+        ]
+        let requestUrl = STRequest.buildResourceRequestUrl(searchQuery: searchQuery, additionalParams: previousRequestParams)!
+        
+        getResourceByUrl(requestUrl, callback: callback);
+    }
+    
     func getResourceByUrl(_ url: URL, callback: @escaping (_ data: Data?) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error == nil {
@@ -40,14 +57,17 @@ class STRequest {
             }.resume()
     }
     
-    static func buildResourceRequestUrl(searchQuery: String, isNextResourceRequest: Bool = false) -> URL? {
+    static func buildResourceRequestUrl(searchQuery: String, additionalParams: [String: String]? = nil) -> URL? {
         var resourceRequestParams = [
             STConstants.RequestKeys.SecretKey: STConstants.RequestValues.SecretKey,
             STConstants.RequestKeys.SearchQuery: searchQuery
         ]
         
-        if isNextResourceRequest {
-            resourceRequestParams[STConstants.RequestKeys.NextQuery] = STConstants.RequestValues.NextQuery
+        if let additionalParams = additionalParams {
+            for (key, value) in additionalParams {
+                resourceRequestParams[key] = value
+            }
+
         }
         
         let requestParamsString = buildRequestParamsString(parameters: resourceRequestParams as [String:AnyObject])

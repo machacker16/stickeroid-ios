@@ -19,12 +19,14 @@ struct STConstants {
         static let ObjectWidth = "w"
         static let ObjectHeight = "h"
         static let NextQuery = "next"
+        static let PreviousQuery = "prev"
     }
     
     struct RequestValues {
         static let SecretKey = "d147203e"
         static let ObjectWidth = "256"
         static let NextQuery = ""
+        static let PreviousQuery = ""
     }
     
 }

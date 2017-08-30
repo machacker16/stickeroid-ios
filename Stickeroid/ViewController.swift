@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var resourceView: UIImageView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -21,6 +21,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let stickeroidLogoImage = #imageLiteral(resourceName: "logo_text.png")
         addNavigationBarImage(stickeroidLogoImage)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: Notification.Name.UIKeyboardWillShow, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func addNavigationBarImage(_ image: UIImage) {
@@ -65,15 +75,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        scrollView.setContentOffset(CGPoint(x: 0, y: 260), animated: true)
-        //scrollView.contentInset = UIEdgeInsetsMake(0, 0, 250, 0)
+    @IBAction func requestPreviousResource(_ sender: UIButton) {
+        requestInstance.getPreviousResourceFromLastSession { data in
+            performUIUpdatesOnMain {
+                self.resourceView.image = UIImage(data: data!)
+            }
+        }
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func keyboardWillAppear(_ notification: Notification) {
+        var keyboardHeight: CGFloat
+        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            keyboardHeight = keyboardRectangle.height
+            
+            scrollView.setContentOffset(CGPoint(x: 0, y: keyboardHeight), animated: true)
+        }
+    }
+    
+    func keyboardWillDisappear() {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-        //scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
     }
-    
 }
 
