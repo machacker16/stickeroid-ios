@@ -15,7 +15,7 @@ Get your a secret key -  <a href="https://www.facebook.com/v2.9/dialog/oauth?cli
 
 /API
 
-Responses are JSON formatted HTTPS://STICKEROID.COM/BOT?C=&S=&I=&W=7&S=7<br>
+Responses are JSON formatted https://stickeroid.com/bot?c=3&k=d147203e&s=hello&w=256<br>
 <b>C</b> - number of output objects
 <b>K</b>  - personal secret key number<br>
 <b>S</b>  - search query<br>
@@ -27,7 +27,6 @@ Responses are JSON formatted HTTPS://STICKEROID.COM/BOT?C=&S=&I=&W=7&S=7<br>
 
 /OUTPUT
 
-Parameters and attributesFOR BOT/SEARCH PROGRAMMABLE API<br>
 <b>Title</b>  - main title of object<br>
 <b>Id</b>  - personal unique number<br>
 <b>Img</b>  - url of original object<br>
