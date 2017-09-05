@@ -15,25 +15,25 @@ Get your a secret key -  <a href="https://www.facebook.com/v2.9/dialog/oauth?cli
 
 /API
 
-Responses are JSON formattedHTTPS://STICKEROID.COM/BOT?C=&S=&I=&W=7&S=7<br>
-<span style="color:red">C</span> - number of output objects
-K - personal secret key number<br>
-S - search query<br>
-I - id of object<br>
-W - width of object<br>
-H - height of object<br>
-Next - next query/session for other sticker<br>
-Prev - previous query/session<br>
+Responses are JSON formatted HTTPS://STICKEROID.COM/BOT?C=&S=&I=&W=7&S=7<br>
+<b>C</b> - number of output objects
+<b>K</b>  - personal secret key number<br>
+<b>S</b>  - search query<br>
+<b>I</b>  - id of object<br>
+<b>W</b>  - width of object<br>
+<b>H</b>  - height of object<br>
+<b>Next</b>  - next query/session for other sticker<br>
+<b>Prev</b>  - previous query/session<br>
 
 /OUTPUT
 
 Parameters and attributesFOR BOT/SEARCH PROGRAMMABLE API<br>
-Title - main title of object<br>
-Id - personal unique number<br>
-Img - url of original object<br>
-Thumb - url of thumbnail object<br>
-Format/Img - .png/.jpg<br>
-Format/Thumb - .png/.jpg<br>
-Error - wrong session<br>
-Error 1 - query rate limit exceeded<br>
-Error 666 - blocked account<br>
+<b>Title</b>  - main title of object<br>
+<b>Id</b>  - personal unique number<br>
+<b>Img</b>  - url of original object<br>
+<b>Thumb</b>  - url of thumbnail object<br>
+<b>Format/Img</b> </b>  - .png/.jpg<br>
+<b>Format/Thumb</b>  - .png/.jpg<br>
+<b>Error </b> - wrong session<br>
+<b>Error 1</b>  - query rate limit exceeded<br>
+<b>Error 666</b>  - blocked account<br>
