@@ -10,17 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let SEARCH_FIELD_PLACEHOLDER = "Translate To Sticker"
+    
     @IBOutlet weak var resourceView: UIImageView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     
     let requestInstance = STRequest()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let stickeroidLogoImage = #imageLiteral(resourceName: "logo_text.png")
+        let stickeroidLogoImage = #imageLiteral(resourceName: "logo_text_white.png")
         addNavigationBarImage(stickeroidLogoImage)
+        
+        searchTextField.placeholder = SEARCH_FIELD_PLACEHOLDER
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +40,16 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
+    }
+
+    @IBAction func hideSearchFieldPlaceholder(_ sender: SearchField) {
+        sender.placeholder = nil
+    }
+    
+    @IBAction func showSearchFieldPlaceholder(_ sender: SearchField) {
+        if (sender.text == "" || sender.text == nil) {
+            sender.placeholder = SEARCH_FIELD_PLACEHOLDER
+        }
     }
     
     func addNavigationBarImage(_ image: UIImage) {
@@ -68,7 +87,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func requestNextResource(_ sender: UIButton) {
-        requestInstance.getNextResourceFromLastSession {data in
+        requestInstance.requestNextStickerFromLastSession {data in
             performUIUpdatesOnMain {
                 self.resourceView.image = UIImage(data: data!)
             }
@@ -76,7 +95,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func requestPreviousResource(_ sender: UIButton) {
-        requestInstance.getPreviousResourceFromLastSession { data in
+        requestInstance.requestPreviousStickerFromLastSession { data in
             performUIUpdatesOnMain {
                 self.resourceView.image = UIImage(data: data!)
             }

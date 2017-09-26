@@ -10,7 +10,9 @@ import Foundation
 
 struct STConstants {
     
-    static let ApiBaseUrl = "http://stickeroid.com/api"
+    static let APIScheme = "https"
+    static let APIHost = "stickeroid.com"
+    static let APIPath = "/api"
     
     struct RequestKeys {
         static let SecretKey = "k"

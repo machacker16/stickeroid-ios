@@ -20,6 +20,8 @@
 		7550B2051F35144000DE7186 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7550B2041F35144000DE7186 /* Images.xcassets */; };
 		7591D5951F54A13E00E70522 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5941F54A13E00E70522 /* back.png */; };
 		7591D5971F54A14400E70522 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5961F54A14400E70522 /* next.png */; };
+		75D568A51F76C60F001EFD69 /* logo_text_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D568A41F76C60F001EFD69 /* logo_text_white.png */; };
+		75D568A71F76D08A001EFD69 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D568A61F76D08A001EFD69 /* SearchField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		7550B2041F35144000DE7186 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7591D5941F54A13E00E70522 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		7591D5961F54A14400E70522 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		75D568A41F76C60F001EFD69 /* logo_text_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_text_white.png; sourceTree = "<group>"; };
+		75D568A61F76D08A001EFD69 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				7550B1E51F31A78200DE7186 /* STButton.swift */,
+				75D568A61F76D08A001EFD69 /* SearchField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 		7550B1F11F346A8300DE7186 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				75D568A41F76C60F001EFD69 /* logo_text_white.png */,
 				7591D5941F54A13E00E70522 /* back.png */,
 				7550B1F31F346A9E00DE7186 /* logo_text.png */,
 				7591D5961F54A14400E70522 /* next.png */,
@@ -191,6 +197,7 @@
 				7591D5971F54A14400E70522 /* next.png in Resources */,
 				7550B1FD1F346ABE00DE7186 /* Main.storyboard in Resources */,
 				7550B2051F35144000DE7186 /* Images.xcassets in Resources */,
+				75D568A51F76C60F001EFD69 /* logo_text_white.png in Resources */,
 				7591D5951F54A13E00E70522 /* back.png in Resources */,
 				7550B1FA1F346ABA00DE7186 /* LaunchScreen.storyboard in Resources */,
 				7550B1F71F346A9E00DE7186 /* stickeroid_logo.png in Resources */,
@@ -209,6 +216,7 @@
 				7527EE7E1F2CA9340031383A /* ViewController.swift in Sources */,
 				7550B1E41F31A74C00DE7186 /* STRequest.swift in Sources */,
 				7527EE7C1F2CA9340031383A /* AppDelegate.swift in Sources */,
+				75D568A71F76D08A001EFD69 /* SearchField.swift in Sources */,
 				7550B1E61F31A78200DE7186 /* STButton.swift in Sources */,
 				7550B1E21F31A6BB00DE7186 /* STConstants.swift in Sources */,
 			);

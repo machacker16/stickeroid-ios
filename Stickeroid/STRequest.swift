@@ -15,11 +15,11 @@ class STRequest {
     func getResourceWithSearchQuery(_ query: String, callback: @escaping (_ data: Data?) -> Void) {
         lastSearchQuery = query
         
-        let requestUrl = STRequest.buildResourceRequestUrl(searchQuery: query)! // TODO: add guard
-        getResourceByUrl(requestUrl, callback: callback);
+        let requestUrl = STRequest.buildStickerRequestURL(searchQuery: query) // TODO: add guard
+        requestStickerByURL(requestUrl, callback: callback);
     }
     
-    func getNextResourceFromLastSession(callback: @escaping (_ data: Data?) -> Void) {
+    func requestNextStickerFromLastSession(callback: @escaping (_ data: Data?) -> Void) {
         guard let searchQuery = lastSearchQuery else {
             print("Can't get next resource: no search was performed before.")
             return
@@ -28,12 +28,12 @@ class STRequest {
         let nextRequestParams = [
             STConstants.RequestKeys.NextQuery: STConstants.RequestValues.NextQuery
         ]
-        let requestUrl = STRequest.buildResourceRequestUrl(searchQuery: searchQuery, additionalParams: nextRequestParams)!
+        let requestUrl = STRequest.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: nextRequestParams)
         
-        getResourceByUrl(requestUrl, callback: callback);
+        requestStickerByURL(requestUrl, callback: callback);
     }
 
-    func getPreviousResourceFromLastSession(callback: @escaping (_ data: Data?) -> Void) {
+    func requestPreviousStickerFromLastSession(callback: @escaping (_ data: Data?) -> Void) {
         guard let searchQuery = lastSearchQuery else {
             print("Can't get previous resource: no search was performed before.")
             return
@@ -42,22 +42,22 @@ class STRequest {
         let previousRequestParams = [
             STConstants.RequestKeys.PreviousQuery: STConstants.RequestValues.PreviousQuery
         ]
-        let requestUrl = STRequest.buildResourceRequestUrl(searchQuery: searchQuery, additionalParams: previousRequestParams)!
+        let requestUrl = STRequest.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: previousRequestParams)
         
-        getResourceByUrl(requestUrl, callback: callback);
+        requestStickerByURL(requestUrl, callback: callback);
     }
     
-    func getResourceByUrl(_ url: URL, callback: @escaping (_ data: Data?) -> Void) {
+    func requestStickerByURL(_ url: URL, callback: @escaping (_ data: Data?) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error == nil {
-                callback(data)
-            } else {
+            guard (error == nil) else {
                 print(error!)
+                return
             }
-            }.resume()
+            callback(data)
+        }.resume()
     }
     
-    static func buildResourceRequestUrl(searchQuery: String, additionalParams: [String: String]? = nil) -> URL? {
+    static func buildStickerRequestURL(searchQuery: String, additionalParams: [String: String]? = nil) -> URL {
         var resourceRequestParams = [
             STConstants.RequestKeys.SecretKey: STConstants.RequestValues.SecretKey,
             STConstants.RequestKeys.SearchQuery: searchQuery
@@ -67,31 +67,26 @@ class STRequest {
             for (key, value) in additionalParams {
                 resourceRequestParams[key] = value
             }
-
         }
         
-        let requestParamsString = buildRequestParamsString(parameters: resourceRequestParams as [String:AnyObject])
-        let requestString = STConstants.ApiBaseUrl + requestParamsString
-        
-        return URL(string: requestString)
+        let requestUrl = stickeroidUrlFromParameters(parameters: resourceRequestParams as [String:AnyObject])
+        return requestUrl
     }
     
-    
-    static func buildRequestParamsString(parameters: [String:AnyObject]) -> String {
-        if parameters.isEmpty {
-            return ""
-        }
+    static func stickeroidUrlFromParameters(parameters: [String:AnyObject]) -> URL {
+        var components = URLComponents()
         
-        var concatenatedKeyValues = [String]()
+        components.scheme = STConstants.APIScheme
+        components.host = STConstants.APIHost
+        components.path = STConstants.APIPath
+        components.queryItems = [URLQueryItem]()
         
         for (key, value) in parameters {
-            let strVal = "\(value)"
-            let escapedVal = strVal.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            
-            concatenatedKeyValues.append(key + "=" + escapedVal!) // WARNING: may be needed to add string interpolation to escapedVal!
+            let queryItem = URLQueryItem(name: key, value: "\(value)")
+            components.queryItems!.append(queryItem)
         }
         
-        return "?\(concatenatedKeyValues.joined(separator: "&"))"
+        return components.url!
     }
     
 }
