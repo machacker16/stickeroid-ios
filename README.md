@@ -20,8 +20,8 @@ Responses are JSON formatted https://stickeroid.com/bot?c=3&k=d147203e&s=hello&w
 <b>K</b>  - personal secret key number<br>
 <b>S</b>  - search query<br>
 <b>I</b>  - id of object<br>
-<b>W</b>  - width of object<br>
-<b>H</b>  - height of object<br>
+<b>W</b>  - auto<br>
+<b>H</b>  - auto<br>
 <b>Next</b>  - next query/session for other sticker<br>
 <b>Prev</b>  - previous query/session<br>
 
