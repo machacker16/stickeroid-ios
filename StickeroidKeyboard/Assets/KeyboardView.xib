@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,144 +14,187 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="594" height="160"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-ED-DPh" userLabel="First Row">
-                    <rect key="frame" x="8" y="8" width="578" height="30"/>
+                    <rect key="frame" x="8" y="8" width="304" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-FL-s2F" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="23" height="30"/>
                             <state key="normal" title="q"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-LX-dh9" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="58.5" y="0.0" width="50.5" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="31" y="0.0" width="23.5" height="30"/>
+                            <state key="normal" title="w"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-3e-Txd" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="117" y="0.0" width="51" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="62.5" y="0.0" width="23" height="30"/>
+                            <state key="normal" title="e"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKu-FJ-el1" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="176" y="0.0" width="50.5" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="93.5" y="0.0" width="23.5" height="30"/>
+                            <state key="normal" title="r"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMh-WA-PEZ" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="234.5" y="0.0" width="50.5" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="125" y="0.0" width="23" height="30"/>
+                            <state key="normal" title="t"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-tF-tA2" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="293" y="0.0" width="50.5" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="156" y="0.0" width="23" height="30"/>
+                            <state key="normal" title="y"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wo-35-0kN" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="351.5" y="0.0" width="50.5" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="187" y="0.0" width="23.5" height="30"/>
+                            <state key="normal" title="u"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy8-Xs-cbu" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="410" y="0.0" width="51" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="218.5" y="0.0" width="23" height="30"/>
+                            <state key="normal" title="i"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slc-aI-Y6H" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="469" y="0.0" width="50.5" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="249.5" y="0.0" width="23.5" height="30"/>
+                            <state key="normal" title="o"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx4-t7-yXh" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="527.5" y="0.0" width="50.5" height="30"/>
-                            <state key="normal" title="q"/>
+                            <rect key="frame" x="281" y="0.0" width="23" height="30"/>
+                            <state key="normal" title="p"/>
                         </button>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aei-AI-Z1T" userLabel="Second Row">
-                    <rect key="frame" x="37.5" y="46" width="519" height="30"/>
+                    <rect key="frame" x="21.5" y="46" width="277" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-EI-cGu" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="23.5" height="30"/>
                             <state key="normal" title="a"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-Zr-Z1r" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="58.5" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="31.5" y="0.0" width="24" height="30"/>
                             <state key="normal" title="s"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvY-Uw-VTx" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="117" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="63.5" y="0.0" width="23.5" height="30"/>
                             <state key="normal" title="d"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-td-p3Q" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="175.5" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="95" y="0.0" width="23.5" height="30"/>
                             <state key="normal" title="f"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afI-BT-JzR" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="234" y="0.0" width="51" height="30"/>
+                            <rect key="frame" x="126.5" y="0.0" width="24" height="30"/>
                             <state key="normal" title="g"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-dU-vSR" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="293" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="158.5" y="0.0" width="23.5" height="30"/>
                             <state key="normal" title="h"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLH-rs-o87" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="351.5" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="190" y="0.0" width="24" height="30"/>
                             <state key="normal" title="j"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIF-oA-fHp" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="410" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="222" y="0.0" width="23.5" height="30"/>
                             <state key="normal" title="k"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-vo-oDt" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="468.5" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="253.5" y="0.0" width="23.5" height="30"/>
                             <state key="normal" title="l"/>
                         </button>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8ET-fp-Ydn" userLabel="Third Row">
-                    <rect key="frame" x="96" y="84" width="402" height="30"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8ET-fp-Ydn" userLabel="Third Row">
+                    <rect key="frame" x="8" y="84" width="304" height="30"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-4w-VF6" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="50.5" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-4w-VF6" userLabel="shift" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
+                            <state key="normal" title="^"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Sg-sDT" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="43" y="0.0" width="24" height="30"/>
                             <state key="normal" title="z"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-RA-k7S" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="58.5" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="75" y="0.0" width="24" height="30"/>
                             <state key="normal" title="x"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv1-gR-Zce" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="117" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="107" y="0.0" width="25" height="30"/>
                             <state key="normal" title="c"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysx-Lg-KBB" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="175.5" y="0.0" width="51" height="30"/>
+                            <rect key="frame" x="140" y="0.0" width="24.5" height="30"/>
                             <state key="normal" title="v"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI6-wJ-Grj" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="234.5" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="172.5" y="0.0" width="24.5" height="30"/>
                             <state key="normal" title="b"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0u-wu-lbk" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="293" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="205" y="0.0" width="24.5" height="30"/>
                             <state key="normal" title="n"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-DR-JIg" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="351.5" y="0.0" width="50.5" height="30"/>
+                            <rect key="frame" x="237.5" y="0.0" width="23.5" height="30"/>
                             <state key="normal" title="m"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDJ-VL-L2d" userLabel="delete" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="269" y="0.0" width="35" height="30"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                            <state key="normal" title="&lt;"/>
+                        </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="Hv1-gR-Zce" firstAttribute="width" secondItem="HdO-Sg-sDT" secondAttribute="width" id="D4c-Bh-3Ji"/>
+                        <constraint firstItem="w0u-wu-lbk" firstAttribute="width" secondItem="HdO-Sg-sDT" secondAttribute="width" id="JnA-Sv-R3J"/>
+                        <constraint firstItem="LI6-wJ-Grj" firstAttribute="width" secondItem="HdO-Sg-sDT" secondAttribute="width" id="N1s-6S-GVv"/>
+                        <constraint firstItem="b0q-4w-VF6" firstAttribute="width" secondItem="uDJ-VL-L2d" secondAttribute="width" id="SME-Wy-VXE"/>
+                        <constraint firstItem="ysx-Lg-KBB" firstAttribute="width" secondItem="HdO-Sg-sDT" secondAttribute="width" id="bOv-bX-e0o"/>
+                        <constraint firstItem="MZd-DR-JIg" firstAttribute="width" secondItem="HdO-Sg-sDT" secondAttribute="width" id="eMj-Fb-sFc"/>
+                        <constraint firstItem="gcM-RA-k7S" firstAttribute="width" secondItem="HdO-Sg-sDT" secondAttribute="width" id="eZL-H6-f7L"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ILV-FM-ucT" userLabel="Fourth Row">
+                    <rect key="frame" x="8" y="122" width="304" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1a-6z-XWr">
+                            <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                            <state key="normal" title="123"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-N4-URH">
+                            <rect key="frame" x="80" y="0.0" width="144" height="30"/>
+                            <state key="normal" title="space"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-Iu-Viq">
+                            <rect key="frame" x="232" y="0.0" width="72" height="30"/>
+                            <state key="normal" title="return"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="PbQ-Iu-Viq" firstAttribute="width" secondItem="f1a-6z-XWr" secondAttribute="width" id="mdH-Jm-j1h"/>
+                        <constraint firstItem="EE5-N4-URH" firstAttribute="width" secondItem="f1a-6z-XWr" secondAttribute="width" multiplier="2" id="rzh-ZH-wb5"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.83429450964043805" green="0.78815182479618162" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="8ET-fp-Ydn" firstAttribute="top" secondItem="aei-AI-Z1T" secondAttribute="bottom" constant="8" id="3Zy-H4-pe0"/>
                 <constraint firstItem="jaP-ED-DPh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="49F-34-uj4"/>
-                <constraint firstItem="b0q-4w-VF6" firstAttribute="width" secondItem="a0N-EI-cGu" secondAttribute="width" id="8q0-fH-B2t"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ILV-FM-ucT" secondAttribute="trailing" constant="8" id="7Gd-aA-T27"/>
                 <constraint firstItem="8ET-fp-Ydn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Fl1-Y8-vwi"/>
+                <constraint firstItem="ILV-FM-ucT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Hbm-Ny-HPV"/>
                 <constraint firstItem="a0N-EI-cGu" firstAttribute="width" secondItem="Dbb-FL-s2F" secondAttribute="width" id="NAy-MR-Exp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aei-AI-Z1T" secondAttribute="trailing" constant="8" id="S3h-gc-Arw"/>
-                <constraint firstItem="8ET-fp-Ydn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="TFA-B7-NW8"/>
+                <constraint firstItem="8ET-fp-Ydn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="TFA-B7-NW8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jaP-ED-DPh" secondAttribute="trailing" constant="8" id="WdM-5D-RAS"/>
+                <constraint firstItem="ILV-FM-ucT" firstAttribute="top" secondItem="8ET-fp-Ydn" secondAttribute="bottom" constant="8" id="WqQ-Z0-Mw3"/>
                 <constraint firstItem="aei-AI-Z1T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="YHb-KK-gfK"/>
                 <constraint firstItem="aei-AI-Z1T" firstAttribute="top" secondItem="jaP-ED-DPh" secondAttribute="bottom" constant="8" id="dnY-2n-bwf"/>
                 <constraint firstItem="jaP-ED-DPh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="fKU-Zo-hR9"/>
+                <constraint firstItem="HdO-Sg-sDT" firstAttribute="width" secondItem="a0N-EI-cGu" secondAttribute="width" id="krU-If-n6E"/>
                 <constraint firstItem="aei-AI-Z1T" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lc0-Bg-URY"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8ET-fp-Ydn" secondAttribute="trailing" constant="8" id="z0E-q9-hhM"/>
+                <constraint firstItem="ILV-FM-ucT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="mEf-WX-J3P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8ET-fp-Ydn" secondAttribute="trailing" constant="8" id="z0E-q9-hhM"/>
                 <constraint firstItem="jaP-ED-DPh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zAL-BZ-EK3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
