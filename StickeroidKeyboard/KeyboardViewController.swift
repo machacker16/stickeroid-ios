@@ -11,16 +11,18 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
     
     var keyboardView: UIView!
+    var heightConstraint: NSLayoutConstraint?
     
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        // Add custom view sizing constraints here
-    }
+    // key is lowercase letter
+    var letterButtonsMap = [String: LetterButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 200.0)
+
         loadKeyboardView();
+        setupLetterButtons()
     }
     
     func loadKeyboardView() {
@@ -28,8 +30,39 @@ class KeyboardViewController: UIInputViewController {
         keyboardView = keyboardViewNib.instantiate(withOwner: self, options: nil)[0] as! UIView
         keyboardView.frame = self.view.bounds
         keyboardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(keyboardView)
-        view.backgroundColor = keyboardView.backgroundColor
+        
+        inputView!.addSubview(keyboardView)
+        inputView!.backgroundColor = keyboardView.backgroundColor
+    }
+    
+    func setupLetterButtons() {
+        for row in self.keyboardView.subviews {
+            for button in row.subviews {
+                if button.tag == Constants.letterButtonTag {
+                    let letterButton = button as! LetterButton
+                    self.letterButtonsMap[letterButton.providedText!] = letterButton
+                }
+            }
+        }
+        
+        for (_, button) in self.letterButtonsMap {
+            button.addTarget(self, action: #selector(self.letterButtonPressed(_:)), for: .touchUpInside)
+        }
+    }
+    
+    // MARK: Lifecycle callbacks
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        
+        if (self.view.frame.size.width == 0 || self.view.frame.size.height == 0) {
+            return
+        }
+        
+        if let heightConstraint = self.heightConstraint {
+            self.inputView?.removeConstraint(heightConstraint)
+        }
+        self.heightConstraint!.constant = Constants.keyboardHeight
+        self.inputView?.addConstraint(self.heightConstraint!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,14 +77,22 @@ class KeyboardViewController: UIInputViewController {
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
         
-        var textColor: UIColor
-        let proxy = self.textDocumentProxy
-        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-            textColor = UIColor.white
-        } else {
-            textColor = UIColor.black
-        }
+//        var textColor: UIColor
+//        let proxy = self.textDocumentProxy
+//        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
+//            textColor = UIColor.white
+//        } else {
+//            textColor = UIColor.black
+//        }
 //        self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
 
+    // MARK: Button actions
+    @objc func letterButtonPressed(_ sender: LetterButton) {
+        self.textDocumentProxy.insertText(sender.providedText!)
+    }
+    
+    @IBAction func deletePressed(_ sender: STButton) {
+//        self.textDocumentProxy.deleteBackward()
+    }
 }

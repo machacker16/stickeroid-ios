@@ -10,12 +10,21 @@ import UIKit
 
 class LetterButton: STButton {
     
+    var providedText: String?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        initLetterButton()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        initLetterButton()
+    }
+    
+    func initLetterButton() {
+        self.tag = Constants.letterButtonTag
+        self.providedText = self.currentTitle
     }
 }
 
