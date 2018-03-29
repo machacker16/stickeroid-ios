@@ -13,6 +13,8 @@ class KeyboardViewController: UIInputViewController {
     var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
     
+    //@IBOutlet weak var stickerView: UIImageView!
+    
     // key is lowercase letter
     var letterButtonsMap = [String: LetterButton]()
     
@@ -93,6 +95,17 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func deletePressed(_ sender: STButton) {
-//        self.textDocumentProxy.deleteBackward()
+        self.textDocumentProxy.deleteBackward()
     }
+    
+    @IBAction func returnPressed(_ sender: STButton) {
+//        let requestInstance = STRequest()
+//        
+//        requestInstance.getResourceWithSearchQuery("lol") { (data) in
+//            performUIUpdatesOnMain {
+//                self.stickerView.image = UIImage(data: data!)
+//            }
+//        }
+    }
+    
 }

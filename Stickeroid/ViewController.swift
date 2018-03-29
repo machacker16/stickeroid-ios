@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func keyboardWillAppear(_ notification: Notification) {
+    @objc func keyboardWillAppear(_ notification: Notification) {
         var keyboardHeight: CGFloat
         if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func keyboardWillDisappear() {
+    @objc func keyboardWillDisappear() {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 }
