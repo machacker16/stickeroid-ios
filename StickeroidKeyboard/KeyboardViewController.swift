@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class KeyboardViewController: UIInputViewController {
     
     var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
     
-    //@IBOutlet weak var stickerView: UIImageView!
+    @IBOutlet weak var stickerView: UIImageView!
     
     // key is lowercase letter
     var letterButtonsMap = [String: LetterButton]()
@@ -99,13 +100,13 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func returnPressed(_ sender: STButton) {
-//        let requestInstance = STRequest()
-//        
-//        requestInstance.getResourceWithSearchQuery("lol") { (data) in
-//            performUIUpdatesOnMain {
-//                self.stickerView.image = UIImage(data: data!)
-//            }
-//        }
+        let requestInstance = STRequest()
+        
+        requestInstance.getResourceWithSearchQuery("lol") { (data) in
+            performUIUpdatesOnMain {
+                self.stickerView.image = UIImage(data: data!)
+            }
+        }
     }
     
 }

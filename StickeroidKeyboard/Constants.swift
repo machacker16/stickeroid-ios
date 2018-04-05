@@ -11,5 +11,5 @@ import UIKit
 struct Constants {
     static let letterButtonTag = 1
     
-    static let keyboardHeight: CGFloat = 300.0
+    static let keyboardHeight: CGFloat = 320.0
 }

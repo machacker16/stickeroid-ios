@@ -27,8 +27,12 @@
 		7563FCCC20682C2300D1D361 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E91F33CA6D00DE7186 /* GCD.swift */; };
 		7591D5951F54A13E00E70522 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5941F54A13E00E70522 /* back.png */; };
 		7591D5971F54A14400E70522 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5961F54A14400E70522 /* next.png */; };
+		75A73F84206FAC4E0094138C /* STConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E11F31A6BB00DE7186 /* STConstants.swift */; };
+		75A73F85206FAC4E0094138C /* STRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E31F31A74C00DE7186 /* STRequest.swift */; };
 		75D568A51F76C60F001EFD69 /* logo_text_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D568A41F76C60F001EFD69 /* logo_text_white.png */; };
 		75D568A71F76D08A001EFD69 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D568A61F76D08A001EFD69 /* SearchField.swift */; };
+		75DBF45F207609DD005744FA /* Pods_StickeroidKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DBF45E207609DD005744FA /* Pods_StickeroidKeyboard.framework */; };
+		A05AD8CB2F54D4E33F69D5EF /* Pods_Stickeroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486E2C6433F09B85A78B5317 /* Pods_Stickeroid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		486E2C6433F09B85A78B5317 /* Pods_Stickeroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickeroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		598D2061F5F01C40F30EC169 /* Pods-Stickeroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeroid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stickeroid/Pods-Stickeroid.debug.xcconfig"; sourceTree = "<group>"; };
 		7527EE781F2CA9340031383A /* Stickeroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stickeroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7527EE7B1F2CA9340031383A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7527EE7D1F2CA9340031383A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +88,11 @@
 		7591D5961F54A14400E70522 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		75D568A41F76C60F001EFD69 /* logo_text_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_text_white.png; sourceTree = "<group>"; };
 		75D568A61F76D08A001EFD69 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		75DBF45E207609DD005744FA /* Pods_StickeroidKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_StickeroidKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BE5A4EEF4A3777D1B376257 /* Pods-Stickeroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stickeroid/Pods-Stickeroid.release.xcconfig"; sourceTree = "<group>"; };
+		7C456F6D7F9FFA644D769227 /* Pods-StickeroidKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickeroidKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-StickeroidKeyboard/Pods-StickeroidKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		9C5B76BED1DB7DAE9242A55C /* Pods-StickeroidKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickeroidKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StickeroidKeyboard/Pods-StickeroidKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		D3BF04C9F6E02EC95F87C47A /* Pods_StickeroidKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickeroidKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05AD8CB2F54D4E33F69D5EF /* Pods_Stickeroid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,18 +108,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DBF45F207609DD005744FA /* Pods_StickeroidKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		466318F99B082823E767B2DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				598D2061F5F01C40F30EC169 /* Pods-Stickeroid.debug.xcconfig */,
+				7BE5A4EEF4A3777D1B376257 /* Pods-Stickeroid.release.xcconfig */,
+				9C5B76BED1DB7DAE9242A55C /* Pods-StickeroidKeyboard.debug.xcconfig */,
+				7C456F6D7F9FFA644D769227 /* Pods-StickeroidKeyboard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7527EE6F1F2CA9340031383A = {
 			isa = PBXGroup;
 			children = (
 				7527EE7A1F2CA9340031383A /* Stickeroid */,
 				754B44C5204F24F50004885F /* StickeroidKeyboard */,
 				7527EE791F2CA9340031383A /* Products */,
+				466318F99B082823E767B2DA /* Pods */,
+				A3B6BAD702B204055DE61227 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +240,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A3B6BAD702B204055DE61227 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75DBF45E207609DD005744FA /* Pods_StickeroidKeyboard.framework */,
+				486E2C6433F09B85A78B5317 /* Pods_Stickeroid.framework */,
+				D3BF04C9F6E02EC95F87C47A /* Pods_StickeroidKeyboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,10 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7527EE8A1F2CA9340031383A /* Build configuration list for PBXNativeTarget "Stickeroid" */;
 			buildPhases = (
+				77D54043A1B92D865B566263 /* [CP] Check Pods Manifest.lock */,
 				7527EE741F2CA9340031383A /* Sources */,
 				7527EE751F2CA9340031383A /* Frameworks */,
 				7527EE761F2CA9340031383A /* Resources */,
 				754B44CF204F24F50004885F /* Embed App Extensions */,
+				04646916407EDFBDC76A30E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 754B44CE204F24F50004885F /* Build configuration list for PBXNativeTarget "StickeroidKeyboard" */;
 			buildPhases = (
+				F977B2F7C9801F2830028BD9 /* [CP] Check Pods Manifest.lock */,
 				754B44C0204F24F50004885F /* Sources */,
 				754B44C1204F24F50004885F /* Frameworks */,
 				754B44C2204F24F50004885F /* Resources */,
@@ -331,6 +370,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04646916407EDFBDC76A30E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Stickeroid/Pods-Stickeroid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stickeroid/Pods-Stickeroid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D54043A1B92D865B566263 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stickeroid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F977B2F7C9801F2830028BD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickeroidKeyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7527EE741F2CA9340031383A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -350,7 +446,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A73F84206FAC4E0094138C /* STConstants.swift in Sources */,
 				7563FCCC20682C2300D1D361 /* GCD.swift in Sources */,
+				75A73F85206FAC4E0094138C /* STRequest.swift in Sources */,
 				755B2DF62059BF9300C34623 /* LetterButton.swift in Sources */,
 				755B2DF32059AC6C00C34623 /* STButton.swift in Sources */,
 				754B44C7204F24F50004885F /* KeyboardViewController.swift in Sources */,
@@ -485,6 +583,7 @@
 		};
 		7527EE8B1F2CA9340031383A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 598D2061F5F01C40F30EC169 /* Pods-Stickeroid.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -501,6 +600,7 @@
 		};
 		7527EE8C1F2CA9340031383A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE5A4EEF4A3777D1B376257 /* Pods-Stickeroid.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -517,6 +617,7 @@
 		};
 		754B44CC204F24F50004885F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C5B76BED1DB7DAE9242A55C /* Pods-StickeroidKeyboard.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -543,6 +644,7 @@
 		};
 		754B44CD204F24F50004885F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C456F6D7F9FFA644D769227 /* Pods-StickeroidKeyboard.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
