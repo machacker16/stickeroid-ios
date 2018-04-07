@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,17 +22,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jd7-Qp-HYI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.99607843137254903" green="0.86274509803921573" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDW-Z6-k7I">
+                                <rect key="frame" x="16" y="8" width="343" height="587"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Settings -&gt; General -&gt; Keyboard -&gt; Keyboards -&gt; Add New Keyboard..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bAu-up-hSh">
+                                        <rect key="frame" x="8" y="229.5" width="327" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Hhz-GX-3yJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bAu-up-hSh" firstAttribute="leading" secondItem="KDW-Z6-k7I" secondAttribute="leading" constant="8" id="CuI-1E-40g"/>
+                                    <constraint firstItem="bAu-up-hSh" firstAttribute="centerY" secondItem="KDW-Z6-k7I" secondAttribute="centerY" id="Xm0-Bg-dUZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bAu-up-hSh" secondAttribute="trailing" constant="8" id="fNs-QF-dbx"/>
+                                    <constraint firstItem="bAu-up-hSh" firstAttribute="centerX" secondItem="KDW-Z6-k7I" secondAttribute="centerX" id="ml2-B7-TjG"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.99607843137254903" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jd7-Qp-HYI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Za-iu-NXF"/>
-                            <constraint firstAttribute="trailing" secondItem="Jd7-Qp-HYI" secondAttribute="trailing" id="R81-2L-vq0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jd7-Qp-HYI" secondAttribute="bottom" id="VVO-JE-dou"/>
-                            <constraint firstItem="Jd7-Qp-HYI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rfV-Nn-PA5"/>
+                            <constraint firstItem="KDW-Z6-k7I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UbE-Hl-vWR"/>
+                            <constraint firstItem="KDW-Z6-k7I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="cF2-5J-8zg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KDW-Z6-k7I" secondAttribute="bottom" constant="8" symbolic="YES" id="ch4-XL-6jv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KDW-Z6-k7I" secondAttribute="trailing" id="wNe-Uy-gIO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M9U-z7-Wsg"/>

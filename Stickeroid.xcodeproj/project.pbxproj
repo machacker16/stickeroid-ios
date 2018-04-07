@@ -11,9 +11,8 @@
 		7527EE7E1F2CA9340031383A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7527EE7D1F2CA9340031383A /* ViewController.swift */; };
 		754B44C7204F24F50004885F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B44C6204F24F50004885F /* KeyboardViewController.swift */; };
 		754B44CB204F24F50004885F /* StickeroidKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 754B44C4204F24F50004885F /* StickeroidKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7550B1E21F31A6BB00DE7186 /* STConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E11F31A6BB00DE7186 /* STConstants.swift */; };
-		7550B1E41F31A74C00DE7186 /* STRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E31F31A74C00DE7186 /* STRequest.swift */; };
-		7550B1E61F31A78200DE7186 /* STButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E51F31A78200DE7186 /* STButton.swift */; };
+		7550B1E21F31A6BB00DE7186 /* RequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E11F31A6BB00DE7186 /* RequestConstants.swift */; };
+		7550B1E41F31A74C00DE7186 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E31F31A74C00DE7186 /* Request.swift */; };
 		7550B1EA1F33CA6D00DE7186 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E91F33CA6D00DE7186 /* GCD.swift */; };
 		7550B1F61F346A9E00DE7186 /* logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 7550B1F31F346A9E00DE7186 /* logo_text.png */; };
 		7550B1F71F346A9E00DE7186 /* stickeroid_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7550B1F41F346A9E00DE7186 /* stickeroid_logo.png */; };
@@ -27,8 +26,8 @@
 		7563FCCC20682C2300D1D361 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E91F33CA6D00DE7186 /* GCD.swift */; };
 		7591D5951F54A13E00E70522 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5941F54A13E00E70522 /* back.png */; };
 		7591D5971F54A14400E70522 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5961F54A14400E70522 /* next.png */; };
-		75A73F84206FAC4E0094138C /* STConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E11F31A6BB00DE7186 /* STConstants.swift */; };
-		75A73F85206FAC4E0094138C /* STRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E31F31A74C00DE7186 /* STRequest.swift */; };
+		75A73F84206FAC4E0094138C /* RequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E11F31A6BB00DE7186 /* RequestConstants.swift */; };
+		75A73F85206FAC4E0094138C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E31F31A74C00DE7186 /* Request.swift */; };
 		75D568A51F76C60F001EFD69 /* logo_text_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D568A41F76C60F001EFD69 /* logo_text_white.png */; };
 		75D568A71F76D08A001EFD69 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D568A61F76D08A001EFD69 /* SearchField.swift */; };
 		75DBF45F207609DD005744FA /* Pods_StickeroidKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DBF45E207609DD005744FA /* Pods_StickeroidKeyboard.framework */; };
@@ -69,9 +68,8 @@
 		754B44C4204F24F50004885F /* StickeroidKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StickeroidKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		754B44C6204F24F50004885F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		754B44C8204F24F50004885F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7550B1E11F31A6BB00DE7186 /* STConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STConstants.swift; sourceTree = "<group>"; };
-		7550B1E31F31A74C00DE7186 /* STRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRequest.swift; sourceTree = "<group>"; };
-		7550B1E51F31A78200DE7186 /* STButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STButton.swift; sourceTree = "<group>"; };
+		7550B1E11F31A6BB00DE7186 /* RequestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConstants.swift; sourceTree = "<group>"; };
+		7550B1E31F31A74C00DE7186 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		7550B1E91F33CA6D00DE7186 /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		7550B1F31F346A9E00DE7186 /* logo_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_text.png; sourceTree = "<group>"; };
 		7550B1F41F346A9E00DE7186 /* stickeroid_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickeroid_logo.png; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				7563FCCE20682E4400D1D361 /* Stickeroid.entitlements */,
 				7527EE8F1F2E4F300031383A /* View */,
 				7527EE901F2E4F3E0031383A /* Controller */,
-				7527EE911F2E4F450031383A /* Model */,
 				7527EE7B1F2CA9340031383A /* AppDelegate.swift */,
 				7550B1E81F31BB5700DE7186 /* Supporting Files */,
 				7550B1F11F346A8300DE7186 /* Assets */,
@@ -163,7 +160,6 @@
 		7527EE8F1F2E4F300031383A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7550B1E51F31A78200DE7186 /* STButton.swift */,
 				75D568A61F76D08A001EFD69 /* SearchField.swift */,
 			);
 			name = View;
@@ -181,16 +177,18 @@
 		7527EE911F2E4F450031383A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7550B1E11F31A6BB00DE7186 /* STConstants.swift */,
-				7550B1E31F31A74C00DE7186 /* STRequest.swift */,
+				7550B1E11F31A6BB00DE7186 /* RequestConstants.swift */,
+				7550B1E31F31A74C00DE7186 /* Request.swift */,
 			);
 			name = Model;
+			path = ../Stickeroid;
 			sourceTree = "<group>";
 		};
 		754B44C5204F24F50004885F /* StickeroidKeyboard */ = {
 			isa = PBXGroup;
 			children = (
 				7563FCCD20682E2000D1D361 /* StickeroidKeyboard.entitlements */,
+				7527EE911F2E4F450031383A /* Model */,
 				755B2DF42059B83600C34623 /* View */,
 				755B2DED2058779600C34623 /* Assets */,
 				754B44C6204F24F50004885F /* KeyboardViewController.swift */,
@@ -434,11 +432,10 @@
 			files = (
 				7550B1EA1F33CA6D00DE7186 /* GCD.swift in Sources */,
 				7527EE7E1F2CA9340031383A /* ViewController.swift in Sources */,
-				7550B1E41F31A74C00DE7186 /* STRequest.swift in Sources */,
+				7550B1E41F31A74C00DE7186 /* Request.swift in Sources */,
 				7527EE7C1F2CA9340031383A /* AppDelegate.swift in Sources */,
 				75D568A71F76D08A001EFD69 /* SearchField.swift in Sources */,
-				7550B1E61F31A78200DE7186 /* STButton.swift in Sources */,
-				7550B1E21F31A6BB00DE7186 /* STConstants.swift in Sources */,
+				7550B1E21F31A6BB00DE7186 /* RequestConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,9 +443,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75A73F84206FAC4E0094138C /* STConstants.swift in Sources */,
+				75A73F84206FAC4E0094138C /* RequestConstants.swift in Sources */,
 				7563FCCC20682C2300D1D361 /* GCD.swift in Sources */,
-				75A73F85206FAC4E0094138C /* STRequest.swift in Sources */,
+				75A73F85206FAC4E0094138C /* Request.swift in Sources */,
 				755B2DF62059BF9300C34623 /* LetterButton.swift in Sources */,
 				755B2DF32059AC6C00C34623 /* STButton.swift in Sources */,
 				754B44C7204F24F50004885F /* KeyboardViewController.swift in Sources */,

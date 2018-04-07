@@ -26,7 +26,7 @@ class STRequest {
         }
         
         let nextRequestParams = [
-            STConstants.RequestKeys.NextQuery: STConstants.RequestValues.NextQuery
+            RequestConstants.RequestKeys.NextQuery: RequestConstants.RequestValues.NextQuery
         ]
         let requestUrl = STRequest.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: nextRequestParams)
         
@@ -40,7 +40,7 @@ class STRequest {
         }
         
         let previousRequestParams = [
-            STConstants.RequestKeys.PreviousQuery: STConstants.RequestValues.PreviousQuery
+            RequestConstants.RequestKeys.PreviousQuery: RequestConstants.RequestValues.PreviousQuery
         ]
         let requestUrl = STRequest.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: previousRequestParams)
         
@@ -59,8 +59,8 @@ class STRequest {
     
     static func buildStickerRequestURL(searchQuery: String, additionalParams: [String: String]? = nil) -> URL {
         var resourceRequestParams = [
-            STConstants.RequestKeys.SecretKey: STConstants.RequestValues.SecretKey,
-            STConstants.RequestKeys.SearchQuery: searchQuery
+            RequestConstants.RequestKeys.SecretKey: RequestConstants.RequestValues.SecretKey,
+            RequestConstants.RequestKeys.SearchQuery: searchQuery
         ]
         
         if let additionalParams = additionalParams {
@@ -76,9 +76,9 @@ class STRequest {
     static func stickeroidUrlFromParameters(parameters: [String:AnyObject]) -> URL {
         var components = URLComponents()
         
-        components.scheme = STConstants.APIScheme
-        components.host = STConstants.APIHost
-        components.path = STConstants.APIPath
+        components.scheme = RequestConstants.APIScheme
+        components.host = RequestConstants.APIHost
+        components.path = RequestConstants.APIPath
         components.queryItems = [URLQueryItem]()
         
         for (key, value) in parameters {

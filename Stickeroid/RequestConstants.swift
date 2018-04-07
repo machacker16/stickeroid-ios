@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct STConstants {
+struct RequestConstants {
     
     static let APIScheme = "https"
     static let APIHost = "stickeroid.com"
