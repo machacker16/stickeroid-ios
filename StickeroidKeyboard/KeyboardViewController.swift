@@ -9,12 +9,12 @@
 import UIKit
 import SDWebImage
 
-class KeyboardViewController: UIInputViewController {
+class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/*, UICollectionViewDelegateFlowLayout*/ {
     
     var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
     
-    @IBOutlet weak var stickerView: UIImageView!
+    @IBOutlet weak var stickerCollectionView: UICollectionView!
     @IBOutlet weak var queryField: UITextField!
     
     // key is lowercase letter
@@ -22,10 +22,14 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadKeyboardView()
         
         self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 200.0)
-
-        loadKeyboardView();
+        
+        stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
+        stickerCollectionView.dataSource = self
+//        stickerCollectionView.delegate = self
+        
         setupLetterButtons()
     }
     
@@ -42,7 +46,7 @@ class KeyboardViewController: UIInputViewController {
     func setupLetterButtons() {
         for row in self.keyboardView.subviews {
             for button in row.subviews {
-                if button.tag == Constants.letterButtonTag {
+                if button.tag == Constants.LetterButtonTag {
                     let letterButton = button as! LetterButton
                     self.letterButtonsMap[letterButton.providedText!] = letterButton
                 }
@@ -65,7 +69,7 @@ class KeyboardViewController: UIInputViewController {
         if let heightConstraint = self.heightConstraint {
             self.inputView?.removeConstraint(heightConstraint)
         }
-        self.heightConstraint!.constant = Constants.keyboardHeight
+        self.heightConstraint!.constant = Constants.KeyboardHeight
         self.inputView?.addConstraint(self.heightConstraint!)
     }
     
@@ -101,50 +105,61 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func returnPressed(_ sender: STButton) {
-        let requestInstance = STRequest()
+        let requestInstance = Request()
         
         guard let query = queryField.text else {
             return
         }
-        
-        stickerView.sd_setImage(with: URL(string: "http://www.domain.com/path/to/image.jpg"), placeholderImage: nil)
-
-        
-        requestInstance.getResourceWithSearchQuery(query) { (data) in
-            performUIUpdatesOnMain {
-                self.stickerView.image = UIImage(data: data!)
-            }
-        }
     }
     
-//    @IBAction func requestNextResource(_ sender: UIButton) {
-//        requestInstance.requestNextStickerFromLastSession {data in
-//            performUIUpdatesOnMain {
-//                self.resourceView.image = UIImage(data: data!)
-//            }
-//        }
-//    }
-//    
-//    @IBAction func requestPreviousResource(_ sender: UIButton) {
-//        requestInstance.requestPreviousStickerFromLastSession { data in
-//            performUIUpdatesOnMain {
-//                self.resourceView.image = UIImage(data: data!)
-//            }
-//        }
-//    }
-//    
-//    @IBAction func performResourceSearch(_ sender: UITextField) {
-//        
-//        guard let searchQuery = sender.text else {
-//            print("Search query is nil.")
-//            return
-//        }
-//        
-//        requestInstance.getResourceWithSearchQuery(searchQuery) { (data) in
-//            performUIUpdatesOnMain {
-//                self.resourceView.image = UIImage(data: data!)
-//            }
-//        }
-//    }
-    
 }
+
+// MARK: - UICollectionViewDataSourceController
+extension KeyboardViewController {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return RequestConstants.ItemsPerRequest
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellReusabilityIdentifier, for: indexPath) as UICollectionViewCell
+        cell.backgroundColor = .red
+    
+//        cell.imageView.sd_setImage(with: URL(string: "https://test"), placeholderImage: #imageLiteral(resourceName: "stickeroid_logo.png"))
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+//extension KeyboardViewController {
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+//        let availableWidth = view.frame.width - paddingSpace
+//        let widthPerItem = availableWidth / itemsPerRow
+//
+//        return CGSize(width: 20, height: 20)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return sectionInsets
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return sectionInsets.left
+//    }
+//}
+
+
+
+
+
+
+
+

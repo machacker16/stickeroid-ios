@@ -8,14 +8,14 @@
 
 import Foundation
 
-class STRequest {
+class Request {
     
     var lastSearchQuery: String?
 
     func getResourceWithSearchQuery(_ query: String, callback: @escaping (_ data: Data?) -> Void) {
         lastSearchQuery = query
         
-        let requestUrl = STRequest.buildStickerRequestURL(searchQuery: query) // TODO: add guard
+        let requestUrl = Request.buildStickerRequestURL(searchQuery: query) // TODO: add guard
         requestStickerByURL(requestUrl, callback: callback);
     }
     
@@ -28,7 +28,7 @@ class STRequest {
         let nextRequestParams = [
             RequestConstants.RequestKeys.NextQuery: RequestConstants.RequestValues.NextQuery
         ]
-        let requestUrl = STRequest.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: nextRequestParams)
+        let requestUrl = Request.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: nextRequestParams)
         
         requestStickerByURL(requestUrl, callback: callback);
     }
@@ -42,7 +42,7 @@ class STRequest {
         let previousRequestParams = [
             RequestConstants.RequestKeys.PreviousQuery: RequestConstants.RequestValues.PreviousQuery
         ]
-        let requestUrl = STRequest.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: previousRequestParams)
+        let requestUrl = Request.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: previousRequestParams)
         
         requestStickerByURL(requestUrl, callback: callback);
     }

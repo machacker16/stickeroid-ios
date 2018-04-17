@@ -10,6 +10,7 @@ import Foundation
 
 struct RequestConstants {
     
+    static let ItemsPerRequest = 12
     static let APIScheme = "https"
     static let APIHost = "stickeroid.com"
     static let APIPath = "/api"

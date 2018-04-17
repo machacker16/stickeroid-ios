@@ -23,7 +23,7 @@ class LetterButton: STButton {
     }
     
     func initLetterButton() {
-        self.tag = Constants.letterButtonTag
+        self.tag = Constants.LetterButtonTag
         self.providedText = self.currentTitle
     }
 }
