@@ -101,16 +101,18 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/
         self.textDocumentProxy.insertText(sender.providedText!)
     }
     
-    @IBAction func deletePressed(_ sender: STButton) {
+    @IBAction func deletePressed(_ sender: KeyboardButton) {
         self.textDocumentProxy.deleteBackward()
     }
     
-    @IBAction func returnPressed(_ sender: STButton) {
+    @IBAction func returnPressed(_ sender: KeyboardButton) {
         let requestInstance = Request()
         
         guard let query = queryField.text else {
             return
         }
+        
+        stickerCollectionView.reloadData()
     }
     
 }
@@ -123,12 +125,18 @@ extension KeyboardViewController {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellReusabilityIdentifier, for: indexPath) as! StickerCell
-        //cell.backgroundColor = .red
-//        cell.imageView.backgroundColor = .red
-//        Разберись как сопоставить вьюху ячейки и xib. Возможно стоит почитать нормально как в ios создается интерфейс.
-//        cell.backgroundColor = .red
     
-        cell.imageView.sd_setImage(with: URL(string: "https://stickeroid.com/uploads/pic/full-pngmart/7f8ac94787f4a5c6d4e42135abd35f31e78a511f.png≥"), placeholderImage: #imageLiteral(resourceName: "stickeroid_logo.png"))
+        guard let query = queryField.text else {
+            return cell
+        }
+        
+        if !query.isEmpty {
+            
+            cell.imageView.sd_setImage(with: URL(string: "https://stickeroid.com/uploads/pic/full-pngmart/7f8ac94787f4a5c6d4e42135abd35f31e78a511f.png"))
+        } else {
+            cell.imageView.image = #imageLiteral(resourceName: "stickeroid_logo.png")
+        }
+        
         return cell
     }
 }

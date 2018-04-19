@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -244,7 +240,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8ET-fp-Ydn" userLabel="Third Row">
                     <rect key="frame" x="8" y="220" width="304" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-4w-VF6" userLabel="shift" customClass="STButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-4w-VF6" userLabel="shift" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="35" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -324,7 +320,7 @@
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDJ-VL-L2d" userLabel="delete" customClass="STButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDJ-VL-L2d" userLabel="delete" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="269" y="0.0" width="35" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -352,7 +348,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ILV-FM-ucT" userLabel="Fourth Row">
                     <rect key="frame" x="8" y="268" width="304" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1a-6z-XWr" customClass="STButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1a-6z-XWr" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="72" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -362,7 +358,7 @@
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-N4-URH" customClass="STButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-N4-URH" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="80" y="0.0" width="144" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -372,7 +368,7 @@
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-Iu-Viq" customClass="STButton" customModule="StickeroidKeyboard" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-Iu-Viq" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="232" y="0.0" width="72" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>

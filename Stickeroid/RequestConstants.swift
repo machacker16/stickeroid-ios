@@ -13,9 +13,11 @@ struct RequestConstants {
     static let ItemsPerRequest = 12
     static let APIScheme = "https"
     static let APIHost = "stickeroid.com"
-    static let APIPath = "/api"
+    static let SearchAPIPath = "/api"
+    static let BotAPIPath = "/bot"
     
     struct RequestKeys {
+        static let NumberOfObjects = "c"
         static let SecretKey = "k"
         static let SearchQuery = "s"
         static let ObjectId = "i"
@@ -26,8 +28,9 @@ struct RequestConstants {
     }
     
     struct RequestValues {
+        static let NumberOfObjects = String(RequestConstants.ItemsPerRequest)
         static let SecretKey = "d147203e"
-        static let ObjectWidth = "256"
+        static let ObjectWidth = "512"
         static let NextQuery = ""
         static let PreviousQuery = ""
     }

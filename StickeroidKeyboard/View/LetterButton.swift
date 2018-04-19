@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LetterButton: STButton {
+class LetterButton: KeyboardButton {
     
     var providedText: String?
     

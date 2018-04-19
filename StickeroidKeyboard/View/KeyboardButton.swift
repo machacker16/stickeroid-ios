@@ -1,5 +1,5 @@
 //
-//  STButton.swift
+//  StickeroidButton.swift
 //  StickeroidKeyboard
 //
 //  Created by Vadym Sidorov on 3/14/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class STButton: UIButton {
+class KeyboardButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

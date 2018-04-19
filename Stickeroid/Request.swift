@@ -8,14 +8,20 @@
 
 import Foundation
 
+fileprivate enum RequestType {
+    case SearchAPI
+    case BotAPI
+}
+
 class Request {
     
     var lastSearchQuery: String?
 
-    func getResourceWithSearchQuery(_ query: String, callback: @escaping (_ data: Data?) -> Void) {
+    // MARK: - Search API
+    func requestSticker(_ query: String, callback: @escaping (_ data: Data?) -> Void) {
         lastSearchQuery = query
         
-        let requestUrl = Request.buildStickerRequestURL(searchQuery: query) // TODO: add guard
+        let requestUrl = Request.buildSearchRequestURL(searchQuery: query) // TODO: add guard
         requestStickerByURL(requestUrl, callback: callback);
     }
     
@@ -28,7 +34,7 @@ class Request {
         let nextRequestParams = [
             RequestConstants.RequestKeys.NextQuery: RequestConstants.RequestValues.NextQuery
         ]
-        let requestUrl = Request.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: nextRequestParams)
+        let requestUrl = Request.buildSearchRequestURL(searchQuery: searchQuery, additionalParams: nextRequestParams)
         
         requestStickerByURL(requestUrl, callback: callback);
     }
@@ -42,12 +48,12 @@ class Request {
         let previousRequestParams = [
             RequestConstants.RequestKeys.PreviousQuery: RequestConstants.RequestValues.PreviousQuery
         ]
-        let requestUrl = Request.buildStickerRequestURL(searchQuery: searchQuery, additionalParams: previousRequestParams)
+        let requestUrl = Request.buildSearchRequestURL(searchQuery: searchQuery, additionalParams: previousRequestParams)
         
         requestStickerByURL(requestUrl, callback: callback);
     }
     
-    func requestStickerByURL(_ url: URL, callback: @escaping (_ data: Data?) -> Void) {
+    fileprivate func requestStickerByURL(_ url: URL, callback: @escaping (_ data: Data?) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard (error == nil) else {
                 print(error!)
@@ -57,9 +63,14 @@ class Request {
         }.resume()
     }
     
-    static func buildStickerRequestURL(searchQuery: String, additionalParams: [String: String]? = nil) -> URL {
+    // MARK: - Bot API
+    
+    
+    // MARK: - Building URL
+    static fileprivate func buildSearchRequestURL(searchQuery: String, additionalParams: [String: String]? = nil) -> URL {
         var resourceRequestParams = [
             RequestConstants.RequestKeys.SecretKey: RequestConstants.RequestValues.SecretKey,
+            RequestConstants.RequestKeys.ObjectWidth: RequestConstants.RequestValues.ObjectWidth,
             RequestConstants.RequestKeys.SearchQuery: searchQuery
         ]
         
@@ -69,16 +80,36 @@ class Request {
             }
         }
         
-        let requestUrl = stickeroidUrlFromParameters(parameters: resourceRequestParams as [String:AnyObject])
+        let requestUrl = stickeroidUrlFromParameters(requestType: .SearchAPI, parameters: resourceRequestParams)
         return requestUrl
     }
     
-    static func stickeroidUrlFromParameters(parameters: [String:AnyObject]) -> URL {
+    static fileprivate func buildBotRequestURL(searchQuery: String) -> URL {
+        var resourceRequestParams = [
+            RequestConstants.RequestKeys.NumberOfObjects: RequestConstants.RequestValues.NumberOfObjects,
+            RequestConstants.RequestKeys.SecretKey: RequestConstants.RequestValues.SecretKey,
+            RequestConstants.RequestKeys.ObjectWidth: RequestConstants.RequestValues.ObjectWidth,
+            RequestConstants.RequestKeys.SearchQuery: searchQuery
+        ]
+        
+        let requestUrl = stickeroidUrlFromParameters(requestType: .BotAPI, parameters: resourceRequestParams)
+        return requestUrl
+    }
+    
+    static fileprivate func stickeroidUrlFromParameters(requestType: RequestType, parameters: [String:String]) -> URL {
         var components = URLComponents()
         
         components.scheme = RequestConstants.APIScheme
         components.host = RequestConstants.APIHost
-        components.path = RequestConstants.APIPath
+        
+        switch(requestType) {
+        case .SearchAPI:
+            components.path = RequestConstants.SearchAPIPath
+            break
+        case .BotAPI:
+            components.path = RequestConstants.BotAPIPath
+        }
+        
         components.queryItems = [URLQueryItem]()
         
         for (key, value) in parameters {
@@ -88,5 +119,4 @@ class Request {
         
         return components.url!
     }
-    
 }
