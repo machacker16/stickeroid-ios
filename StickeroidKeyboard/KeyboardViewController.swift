@@ -27,6 +27,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/
         self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 200.0)
         
         stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
+        stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
         stickerCollectionView.dataSource = self
 //        stickerCollectionView.delegate = self
         
@@ -119,13 +120,15 @@ extension KeyboardViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return RequestConstants.ItemsPerRequest
     }
-
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellReusabilityIdentifier, for: indexPath) as UICollectionViewCell
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellReusabilityIdentifier, for: indexPath) as! StickerCell
+        //cell.backgroundColor = .red
+//        cell.imageView.backgroundColor = .red
+//        Разберись как сопоставить вьюху ячейки и xib. Возможно стоит почитать нормально как в ios создается интерфейс.
+//        cell.backgroundColor = .red
     
-//        cell.imageView.sd_setImage(with: URL(string: "https://test"), placeholderImage: #imageLiteral(resourceName: "stickeroid_logo.png"))
+        cell.imageView.sd_setImage(with: URL(string: "https://stickeroid.com/uploads/pic/full-pngmart/7f8ac94787f4a5c6d4e42135abd35f31e78a511f.png≥"), placeholderImage: #imageLiteral(resourceName: "stickeroid_logo.png"))
         return cell
     }
 }

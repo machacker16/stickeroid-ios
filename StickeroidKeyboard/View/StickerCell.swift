@@ -9,5 +9,12 @@
 import UIKit
 
 class StickerCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageView: UIImageView!
+    var test: String?
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        test = "Allah"
+    }
 }
