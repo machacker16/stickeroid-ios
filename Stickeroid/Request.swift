@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias StickerURL = (thumbnail: URL, image: URL)
+
 fileprivate enum RequestType {
     case SearchAPI
     case BotAPI
@@ -55,7 +57,7 @@ class Request {
     
     fileprivate func requestStickerByURL(_ url: URL, callback: @escaping (_ data: Data?) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard (error == nil) else {
+            guard error == nil else {
                 print(error!)
                 return
             }
@@ -64,7 +66,46 @@ class Request {
     }
     
     // MARK: - Bot API
+    static func getStickerURLsFor(searchQuery: String, numberOfStickers: Int, callback: @escaping (_ urls: [StickerURL]) -> Void) {
+        requestStickersBundle(searchQuery: searchQuery, numberOfStickers: numberOfStickers) { (_ data: Data?) in
+            guard let data = data else {
+                print("No data was retreived")
+                return
+            }
+            
+            let stickersBundle: [AnyObject]!
+            do {
+                stickersBundle = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [AnyObject]
+            } catch {
+                print("Could not parse retreived JSON root.")
+                return
+            }
+            
+            var stickerURLs = [StickerURL]()
+            for stickerData in stickersBundle {
+                //TODO: add checks
+                let stickerDataSafe = stickerData as! [String: Any]
+                var thumbnailURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Thumbnail] as! String
+                var imageURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Image] as! String
+                thumbnailURL = "\(Request.buildDomain())\(thumbnailURL)"
+                imageURL = "\(Request.buildDomain())\(imageURL)"
+                stickerURLs.append((URL(string: thumbnailURL)!, URL(string: imageURL)!))
+            }
+            callback(stickerURLs)
+        }
+    }
     
+    fileprivate static func requestStickersBundle(searchQuery: String, numberOfStickers: Int, callback: @escaping (_ data: Data?) -> Void) {
+        let requestUrl = Request.buildBotRequestURL(searchQuery: searchQuery, numberOfStickers: RequestConstants.ItemsPerRequest)
+        
+        URLSession.shared.dataTask(with: requestUrl) { (data, response, error) in
+            guard error == nil else {
+                print(error!)
+                return
+            }
+            callback(data)
+        }.resume()
+    }
     
     // MARK: - Building URL
     static fileprivate func buildSearchRequestURL(searchQuery: String, additionalParams: [String: String]? = nil) -> URL {
@@ -84,9 +125,9 @@ class Request {
         return requestUrl
     }
     
-    static fileprivate func buildBotRequestURL(searchQuery: String) -> URL {
+    static fileprivate func buildBotRequestURL(searchQuery: String, numberOfStickers: Int) -> URL {
         var resourceRequestParams = [
-            RequestConstants.RequestKeys.NumberOfObjects: RequestConstants.RequestValues.NumberOfObjects,
+            RequestConstants.RequestKeys.NumberOfObjects: String(numberOfStickers),
             RequestConstants.RequestKeys.SecretKey: RequestConstants.RequestValues.SecretKey,
             RequestConstants.RequestKeys.ObjectWidth: RequestConstants.RequestValues.ObjectWidth,
             RequestConstants.RequestKeys.SearchQuery: searchQuery
@@ -118,5 +159,10 @@ class Request {
         }
         
         return components.url!
+    }
+    
+    //TODO: queryItem
+    static fileprivate func buildDomain() -> String {
+        return "\(RequestConstants.APIScheme)://\(RequestConstants.APIHost)"
     }
 }

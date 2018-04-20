@@ -28,11 +28,15 @@ struct RequestConstants {
     }
     
     struct RequestValues {
-        static let NumberOfObjects = String(RequestConstants.ItemsPerRequest)
         static let SecretKey = "d147203e"
         static let ObjectWidth = "512"
         static let NextQuery = ""
         static let PreviousQuery = ""
     }
     
+    struct StickerBundleJsonKeys {
+        static let Title = "title"
+        static let Thumbnail = "thumb"
+        static let Image = "img"
+    }
 }

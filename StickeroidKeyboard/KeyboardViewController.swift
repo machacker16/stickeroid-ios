@@ -13,6 +13,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/
     
     var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
+    var lastQueryStickerUrls: [StickerURL]?
     
     @IBOutlet weak var stickerCollectionView: UICollectionView!
     @IBOutlet weak var queryField: UITextField!
@@ -106,15 +107,16 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/
     }
     
     @IBAction func returnPressed(_ sender: KeyboardButton) {
-        let requestInstance = Request()
-        
+        //TODO: create computed property for query, which automatically parses non-valid queries and returns nil
         guard let query = queryField.text else {
             return
         }
         
-        stickerCollectionView.reloadData()
+        Request.getStickerURLsFor(searchQuery: query, numberOfStickers: RequestConstants.ItemsPerRequest) { (_ urls: [StickerURL]) in            
+            self.lastQueryStickerUrls = urls
+            self.stickerCollectionView.reloadData()
+        }
     }
-    
 }
 
 // MARK: - UICollectionViewDataSourceController
@@ -125,18 +127,17 @@ extension KeyboardViewController {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellReusabilityIdentifier, for: indexPath) as! StickerCell
-    
-        guard let query = queryField.text else {
+        
+        guard let stickerURLs = lastQueryStickerUrls else {
+            cell.imageView.image = #imageLiteral(resourceName: "stickeroid_logo.png")
             return cell
         }
+
+        //TODO: safe
+        let thumbnailURL = stickerURLs[indexPath.row].0 // SECTION COULD BE WRONG PROPERTY IN THIS CASE
         
-        if !query.isEmpty {
-            
-            cell.imageView.sd_setImage(with: URL(string: "https://stickeroid.com/uploads/pic/full-pngmart/7f8ac94787f4a5c6d4e42135abd35f31e78a511f.png"))
-        } else {
-            cell.imageView.image = #imageLiteral(resourceName: "stickeroid_logo.png")
-        }
-        
+        // Works bad on each scrolling performed. Need better solution.
+        cell.imageView.sd_setImage(with: thumbnailURL)
         return cell
     }
 }
