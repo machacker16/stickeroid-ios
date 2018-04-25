@@ -11,4 +11,7 @@ import UIKit
 class StickerCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var thumbnailURL: URL?
+    var fullImageURL: URL?
 }

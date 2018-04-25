@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/*, UICollectionViewDelegateFlowLayout*/ {
+class KeyboardViewController: UIInputViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
@@ -30,7 +30,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/
         stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
         stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
         stickerCollectionView.dataSource = self
-//        stickerCollectionView.delegate = self
+        stickerCollectionView.delegate = self
         
         setupLetterButtons()
     }
@@ -139,44 +139,35 @@ extension KeyboardViewController {
 
         if (indexPath.row < stickerURLs.count) {
             let thumbnailURL = stickerURLs[indexPath.row].0
+            let fullImageURL = stickerURLs[indexPath.row].1
+            
+            cell.thumbnailURL = thumbnailURL
+            cell.fullImageURL = fullImageURL
             // Library guarantees same URL won't be fetched twice
-            cell.imageView.sd_setImage(with: thumbnailURL)
+            cell.imageView.sd_setImage(with: cell.thumbnailURL)
         }
         
         return cell
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
-//extension KeyboardViewController {
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-//        let availableWidth = view.frame.width - paddingSpace
-//        let widthPerItem = availableWidth / itemsPerRow
-//
-//        return CGSize(width: 20, height: 20)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return sectionInsets
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return sectionInsets.left
-//    }
-//}
-
-
-
-
-
-
-
-
+// MARK: - UICollectionViewDelegate
+extension KeyboardViewController {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = (collectionView.cellForItem(at: indexPath) as! StickerCell)
+        
+        guard let fullImageURL = cell.fullImageURL else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: fullImageURL) { (data, response, error) in
+            guard error == nil else {
+                print(error!)
+                return
+            }
+            
+            UIPasteboard.general.image = UIImage(data: data!)
+        }.resume()
+        
+    }
+}
