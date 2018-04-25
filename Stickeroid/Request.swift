@@ -56,7 +56,7 @@ class Request {
     }
     
     fileprivate func requestStickerByURL(_ url: URL, callback: @escaping (_ data: Data?) -> Void) {
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             guard error == nil else {
                 print(error!)
                 return

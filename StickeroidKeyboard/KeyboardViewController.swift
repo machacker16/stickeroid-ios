@@ -112,10 +112,14 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource/
             return
         }
         
-        Request.getStickerURLsFor(searchQuery: query, numberOfStickers: RequestConstants.ItemsPerRequest) { (_ urls: [StickerURL]) in            
-            self.lastQueryStickerUrls = urls
-            self.stickerCollectionView.reloadData()
-        }
+        Request.getStickerURLsFor(searchQuery: query,
+                                  numberOfStickers: RequestConstants.ItemsPerRequest) { [weak self] (_ urls: [StickerURL]) in
+                self?.lastQueryStickerUrls = urls
+            
+                DispatchQueue.main.async { [weak self] in
+                    self?.stickerCollectionView.reloadData()
+                }
+            }
     }
 }
 
@@ -133,11 +137,12 @@ extension KeyboardViewController {
             return cell
         }
 
-        //TODO: safe
-        let thumbnailURL = stickerURLs[indexPath.row].0 // SECTION COULD BE WRONG PROPERTY IN THIS CASE
+        if (indexPath.row < stickerURLs.count) {
+            let thumbnailURL = stickerURLs[indexPath.row].0
+            // Library guarantees same URL won't be fetched twice
+            cell.imageView.sd_setImage(with: thumbnailURL)
+        }
         
-        // Works bad on each scrolling performed. Need better solution.
-        cell.imageView.sd_setImage(with: thumbnailURL)
         return cell
     }
 }
