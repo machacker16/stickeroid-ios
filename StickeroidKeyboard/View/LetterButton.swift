@@ -8,9 +8,21 @@
 
 import UIKit
 
+enum LetterButtonState {
+    case LowerCase
+    case UpperCase
+}
+
 class LetterButton: KeyboardButton {
     
-    var providedText: String?
+    static var letterButtonsState: LetterButtonState = .LowerCase
+    var buttonStates = [LetterButtonState: String]()
+    
+    var providedText: String {
+        get {
+            return buttonStates[LetterButton.letterButtonsState]!
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +36,8 @@ class LetterButton: KeyboardButton {
     
     func initLetterButton() {
         self.tag = Constants.LetterButtonTag
-        self.providedText = self.currentTitle
+        buttonStates[.LowerCase] = self.currentTitle!
+        buttonStates[.UpperCase] = self.currentTitle!.uppercased()
     }
 }
 

@@ -253,6 +253,9 @@
                             <state key="normal" image="capslock">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="capslockPressed:" destination="-1" eventType="touchUpInside" id="FXI-Kf-Mly"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Sg-sDT" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="43" y="0.0" width="24" height="40"/>
@@ -275,7 +278,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv1-gR-Zce" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="107" y="0.0" width="25" height="40"/>
+                            <rect key="frame" x="107" y="0.0" width="24.5" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="3Ao-tR-bOo"/>
@@ -285,7 +288,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysx-Lg-KBB" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="140" y="0.0" width="24.5" height="40"/>
+                            <rect key="frame" x="139.5" y="0.0" width="24.5" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="mWb-ev-SFA"/>
@@ -295,7 +298,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI6-wJ-Grj" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="172.5" y="0.0" width="24.5" height="40"/>
+                            <rect key="frame" x="172" y="0.0" width="25" height="40"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="mFU-YA-4rf"/>

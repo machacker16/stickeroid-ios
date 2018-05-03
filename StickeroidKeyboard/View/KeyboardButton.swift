@@ -10,6 +10,8 @@ import UIKit
 
 class KeyboardButton: UIButton {
     
+    @IBInspectable var extendTouchAreaBy: CGFloat = 5.0
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupAppearance()
@@ -24,9 +26,8 @@ class KeyboardButton: UIButton {
         self.layer.cornerRadius = 5
     }
     
-    @IBInspectable var margin: CGFloat = 5.0
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        let area = self.bounds.insetBy(dx: -margin, dy: -margin)
+        let area = self.bounds.insetBy(dx: -extendTouchAreaBy, dy: -extendTouchAreaBy)
         return area.contains(point)
     }
 }

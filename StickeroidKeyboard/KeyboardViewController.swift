@@ -50,7 +50,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
             for button in row.subviews {
                 if button.tag == Constants.LetterButtonTag {
                     let letterButton = button as! LetterButton
-                    self.letterButtonsMap[letterButton.providedText!] = letterButton
+                    self.letterButtonsMap[letterButton.providedText] = letterButton
                 }
             }
         }
@@ -99,11 +99,22 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
 
     // MARK: Button actions
     @objc func letterButtonPressed(_ sender: LetterButton) {
-        self.textDocumentProxy.insertText(sender.providedText!)
+        self.textDocumentProxy.insertText(sender.providedText)
     }
     
     @IBAction func keyboardSelectionPressed(_ sender: KeyboardButton) {
         self.advanceToNextInputMode()
+    }
+    
+    @IBAction func capslockPressed(_ sender: KeyboardButton) {
+        switch LetterButton.letterButtonsState {
+        case .LowerCase:
+            LetterButton.letterButtonsState = .UpperCase
+            break
+        case .UpperCase:
+            LetterButton.letterButtonsState = .LowerCase
+            break
+        }
     }
     
     @IBAction func deletePressed(_ sender: KeyboardButton) {
