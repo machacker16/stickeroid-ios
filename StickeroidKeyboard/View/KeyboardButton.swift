@@ -23,4 +23,10 @@ class KeyboardButton: UIButton {
     func setupAppearance() {
         self.layer.cornerRadius = 5
     }
+    
+    @IBInspectable var margin: CGFloat = 5.0
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        let area = self.bounds.insetBy(dx: -margin, dy: -margin)
+        return area.contains(point)
+    }
 }

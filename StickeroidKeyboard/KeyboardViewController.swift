@@ -102,6 +102,10 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         self.textDocumentProxy.insertText(sender.providedText!)
     }
     
+    @IBAction func keyboardSelectionPressed(_ sender: KeyboardButton) {
+        self.advanceToNextInputMode()
+    }
+    
     @IBAction func deletePressed(_ sender: KeyboardButton) {
         self.textDocumentProxy.deleteBackward()
     }
