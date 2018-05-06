@@ -35,10 +35,14 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlL-Pu-M9A" userLabel="Query Field">
-                    <rect key="frame" x="8" y="86" width="304" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="wlL-Pu-M9A" userLabel="Query Field">
+                    <rect key="frame" x="8" y="86" width="304" height="34"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="C0O-2E-tVm"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-ED-DPh" userLabel="First Row">
@@ -46,7 +50,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-FL-s2F" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="5a7-hc-5Av"/>
                             </constraints>
@@ -58,7 +62,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-LX-dh9" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="32" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="b3n-jL-i8U"/>
                             </constraints>
@@ -70,7 +74,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-3e-Txd" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="63.5" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="xzg-Ad-AZU"/>
                             </constraints>
@@ -82,7 +86,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKu-FJ-el1" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="95.5" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="Y1e-RJ-k9I"/>
                             </constraints>
@@ -94,7 +98,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMh-WA-PEZ" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="127" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="FjO-F2-oLB"/>
                             </constraints>
@@ -106,7 +110,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-tF-tA2" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="159" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="6b9-Ov-yMu"/>
                             </constraints>
@@ -118,7 +122,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wo-35-0kN" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="191" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="cJS-QK-j9S"/>
                             </constraints>
@@ -130,7 +134,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy8-Xs-cbu" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="222.5" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="MXe-VI-Faz"/>
                             </constraints>
@@ -142,7 +146,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slc-aI-Y6H" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="254.5" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="kMc-p4-fL4"/>
                             </constraints>
@@ -154,7 +158,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx4-t7-yXh" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="286" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="x27-mP-PUU"/>
                             </constraints>
@@ -171,7 +175,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-EI-cGu" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="Mc9-hR-eQc"/>
                             </constraints>
@@ -183,7 +187,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-Zr-Z1r" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="31.5" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="ZwW-zZ-2Zc"/>
                             </constraints>
@@ -195,7 +199,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvY-Uw-VTx" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="63" y="0.0" width="25" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="uwc-r9-JBO"/>
                             </constraints>
@@ -207,7 +211,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-td-p3Q" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="94" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="pty-Sn-lFH"/>
                             </constraints>
@@ -219,7 +223,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afI-BT-JzR" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="125.5" y="0.0" width="25" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="MXw-OK-Sha"/>
                             </constraints>
@@ -231,7 +235,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-dU-vSR" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="156.5" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="MQq-wf-qwI"/>
                             </constraints>
@@ -243,7 +247,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLH-rs-o87" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="188" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="NKg-nZ-AeG"/>
                             </constraints>
@@ -255,7 +259,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIF-oA-fHp" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="219.5" y="0.0" width="25" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="wWE-qe-AaZ"/>
                             </constraints>
@@ -267,7 +271,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-vo-oDt" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="250.5" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="akd-CY-iMh"/>
                             </constraints>
@@ -284,7 +288,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-4w-VF6" userLabel="shift" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="bHN-dY-9v2"/>
                             </constraints>
@@ -299,7 +303,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Sg-sDT" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="48" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="254-9N-ddg"/>
                             </constraints>
@@ -311,7 +315,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-RA-k7S" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="80" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="b4K-Sy-nJv"/>
                             </constraints>
@@ -323,7 +327,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv1-gR-Zce" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="112" y="0.0" width="25" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="3Ao-tR-bOo"/>
                             </constraints>
@@ -335,7 +339,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysx-Lg-KBB" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="143" y="0.0" width="26" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="mWb-ev-SFA"/>
                             </constraints>
@@ -347,7 +351,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI6-wJ-Grj" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="175" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="mFU-YA-4rf"/>
                             </constraints>
@@ -359,7 +363,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0u-wu-lbk" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="206.5" y="0.0" width="26.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="YNm-uD-Khr"/>
                             </constraints>
@@ -371,7 +375,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-DR-JIg" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="239" y="0.0" width="25.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="7Jl-cy-9Q7"/>
                             </constraints>
@@ -383,7 +387,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDJ-VL-L2d" userLabel="delete" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="270.5" y="0.0" width="41.5" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="X8E-LC-We0"/>
                             </constraints>
@@ -412,7 +416,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1a-6z-XWr" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="69" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="SmL-ZW-TYS"/>
                             </constraints>
@@ -427,7 +431,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-N4-URH" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="87" y="0.0" width="138" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="ggv-dA-gxS"/>
                             </constraints>
@@ -439,7 +443,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-Iu-Viq" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
                             <rect key="frame" x="243" y="0.0" width="69" height="42"/>
-                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.99607843137254903" green="0.86274509803921573" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="IUR-zV-X5d"/>
                             </constraints>
@@ -459,11 +463,11 @@
                     </constraints>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.83429450964043805" green="0.84705882352941175" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.82352941176470584" green="0.83529411764705885" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="wlL-Pu-M9A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="1u5-9a-1QW"/>
                 <constraint firstItem="8ET-fp-Ydn" firstAttribute="top" secondItem="aei-AI-Z1T" secondAttribute="bottom" constant="12" id="3Zy-H4-pe0"/>
-                <constraint firstItem="jaP-ED-DPh" firstAttribute="top" secondItem="wlL-Pu-M9A" secondAttribute="bottom" constant="12" id="49F-34-uj4"/>
+                <constraint firstItem="jaP-ED-DPh" firstAttribute="top" secondItem="wlL-Pu-M9A" secondAttribute="bottom" constant="8" id="49F-34-uj4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ILV-FM-ucT" secondAttribute="trailing" constant="4" id="7Gd-aA-T27"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wlL-Pu-M9A" secondAttribute="trailing" constant="8" id="8WK-tY-sxc"/>
                 <constraint firstItem="wlL-Pu-M9A" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DHc-oG-POD"/>
