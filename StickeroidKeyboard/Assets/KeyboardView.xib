@@ -19,7 +19,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B81-ph-kaT">
@@ -41,300 +41,356 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-ED-DPh" userLabel="First Row">
-                    <rect key="frame" x="8" y="124" width="304" height="40"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-ED-DPh" userLabel="First Row">
+                    <rect key="frame" x="4" y="128" width="312" height="42"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-FL-s2F" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="23" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="5a7-hc-5Av"/>
+                                <constraint firstAttribute="height" constant="42" id="5a7-hc-5Av"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="q">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-LX-dh9" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="31" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="32" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="b3n-jL-i8U"/>
+                                <constraint firstAttribute="height" constant="42" id="b3n-jL-i8U"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="w">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-3e-Txd" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="62.5" y="0.0" width="23" height="40"/>
+                            <rect key="frame" x="63.5" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="xzg-Ad-AZU"/>
+                                <constraint firstAttribute="height" constant="42" id="xzg-Ad-AZU"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="e">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKu-FJ-el1" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="93.5" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="95.5" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Y1e-RJ-k9I"/>
+                                <constraint firstAttribute="height" constant="42" id="Y1e-RJ-k9I"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="r">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMh-WA-PEZ" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="125" y="0.0" width="23" height="40"/>
+                            <rect key="frame" x="127" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="FjO-F2-oLB"/>
+                                <constraint firstAttribute="height" constant="42" id="FjO-F2-oLB"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="t">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-tF-tA2" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="156" y="0.0" width="23" height="40"/>
+                            <rect key="frame" x="159" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="6b9-Ov-yMu"/>
+                                <constraint firstAttribute="height" constant="42" id="6b9-Ov-yMu"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="y">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wo-35-0kN" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="187" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="191" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="cJS-QK-j9S"/>
+                                <constraint firstAttribute="height" constant="42" id="cJS-QK-j9S"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="u">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy8-Xs-cbu" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="218.5" y="0.0" width="23" height="40"/>
+                            <rect key="frame" x="222.5" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="MXe-VI-Faz"/>
+                                <constraint firstAttribute="height" constant="42" id="MXe-VI-Faz"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="i">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slc-aI-Y6H" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="249.5" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="254.5" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="kMc-p4-fL4"/>
+                                <constraint firstAttribute="height" constant="42" id="kMc-p4-fL4"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="o">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx4-t7-yXh" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="281" y="0.0" width="23" height="40"/>
+                            <rect key="frame" x="286" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="x27-mP-PUU"/>
+                                <constraint firstAttribute="height" constant="42" id="x27-mP-PUU"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="p">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aei-AI-Z1T" userLabel="Second Row">
-                    <rect key="frame" x="21.5" y="172" width="277" height="40"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="aei-AI-Z1T" userLabel="Second Row">
+                    <rect key="frame" x="22.5" y="182" width="276" height="42"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-EI-cGu" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Mc9-hR-eQc"/>
+                                <constraint firstAttribute="height" constant="42" id="Mc9-hR-eQc"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="a">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-Zr-Z1r" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="31.5" y="0.0" width="24" height="40"/>
+                            <rect key="frame" x="31.5" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="ZwW-zZ-2Zc"/>
+                                <constraint firstAttribute="height" constant="42" id="ZwW-zZ-2Zc"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="s">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvY-Uw-VTx" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="63.5" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="63" y="0.0" width="25" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="uwc-r9-JBO"/>
+                                <constraint firstAttribute="height" constant="42" id="uwc-r9-JBO"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="d">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-td-p3Q" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="95" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="94" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="pty-Sn-lFH"/>
+                                <constraint firstAttribute="height" constant="42" id="pty-Sn-lFH"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="f">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afI-BT-JzR" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="126.5" y="0.0" width="24" height="40"/>
+                            <rect key="frame" x="125.5" y="0.0" width="25" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="MXw-OK-Sha"/>
+                                <constraint firstAttribute="height" constant="42" id="MXw-OK-Sha"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="g">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-dU-vSR" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="158.5" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="156.5" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="MQq-wf-qwI"/>
+                                <constraint firstAttribute="height" constant="42" id="MQq-wf-qwI"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="h">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLH-rs-o87" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="190" y="0.0" width="24" height="40"/>
+                            <rect key="frame" x="188" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="NKg-nZ-AeG"/>
+                                <constraint firstAttribute="height" constant="42" id="NKg-nZ-AeG"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="j">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIF-oA-fHp" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="222" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="219.5" y="0.0" width="25" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="wWE-qe-AaZ"/>
+                                <constraint firstAttribute="height" constant="42" id="wWE-qe-AaZ"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="k">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-vo-oDt" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="253.5" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="250.5" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="akd-CY-iMh"/>
+                                <constraint firstAttribute="height" constant="42" id="akd-CY-iMh"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="l">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8ET-fp-Ydn" userLabel="Third Row">
-                    <rect key="frame" x="8" y="220" width="304" height="40"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8ET-fp-Ydn" userLabel="Third Row">
+                    <rect key="frame" x="4" y="236" width="312" height="42"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-4w-VF6" userLabel="shift" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="35" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="bHN-dY-9v2"/>
+                                <constraint firstAttribute="height" constant="42" id="bHN-dY-9v2"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" image="capslock">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="capslockPressed:" destination="-1" eventType="touchUpInside" id="FXI-Kf-Mly"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Sg-sDT" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="43" y="0.0" width="24" height="40"/>
+                            <rect key="frame" x="48" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="254-9N-ddg"/>
+                                <constraint firstAttribute="height" constant="42" id="254-9N-ddg"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="z">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-RA-k7S" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="75" y="0.0" width="24" height="40"/>
+                            <rect key="frame" x="80" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="b4K-Sy-nJv"/>
+                                <constraint firstAttribute="height" constant="42" id="b4K-Sy-nJv"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="x">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv1-gR-Zce" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="107" y="0.0" width="24.5" height="40"/>
+                            <rect key="frame" x="112" y="0.0" width="25" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="3Ao-tR-bOo"/>
+                                <constraint firstAttribute="height" constant="42" id="3Ao-tR-bOo"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="c">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysx-Lg-KBB" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="139.5" y="0.0" width="24.5" height="40"/>
+                            <rect key="frame" x="143" y="0.0" width="26" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="mWb-ev-SFA"/>
+                                <constraint firstAttribute="height" constant="42" id="mWb-ev-SFA"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="v">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI6-wJ-Grj" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="172" y="0.0" width="25" height="40"/>
+                            <rect key="frame" x="175" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="mFU-YA-4rf"/>
+                                <constraint firstAttribute="height" constant="42" id="mFU-YA-4rf"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="b">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0u-wu-lbk" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="205" y="0.0" width="24.5" height="40"/>
+                            <rect key="frame" x="206.5" y="0.0" width="26.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="YNm-uD-Khr"/>
+                                <constraint firstAttribute="height" constant="42" id="YNm-uD-Khr"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="n">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-DR-JIg" customClass="LetterButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="237.5" y="0.0" width="23.5" height="40"/>
+                            <rect key="frame" x="239" y="0.0" width="25.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="7Jl-cy-9Q7"/>
+                                <constraint firstAttribute="height" constant="42" id="7Jl-cy-9Q7"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="m">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDJ-VL-L2d" userLabel="delete" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="269" y="0.0" width="35" height="40"/>
+                            <rect key="frame" x="270.5" y="0.0" width="41.5" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="X8E-LC-We0"/>
+                                <constraint firstAttribute="height" constant="42" id="X8E-LC-We0"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" image="backspace">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="deletePressed:" destination="-1" eventType="touchUpInside" id="fee-hL-A9n"/>
@@ -351,40 +407,46 @@
                         <constraint firstItem="gcM-RA-k7S" firstAttribute="width" secondItem="HdO-Sg-sDT" secondAttribute="width" id="eZL-H6-f7L"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ILV-FM-ucT" userLabel="Fourth Row">
-                    <rect key="frame" x="8" y="268" width="304" height="40"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ILV-FM-ucT" userLabel="Fourth Row">
+                    <rect key="frame" x="4" y="290" width="312" height="42"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1a-6z-XWr" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="72" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="69" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="SmL-ZW-TYS"/>
+                                <constraint firstAttribute="height" constant="42" id="SmL-ZW-TYS"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" image="language">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="keyboardSelectionPressed:" destination="-1" eventType="touchUpInside" id="rkd-Dp-cHG"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-N4-URH" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="80" y="0.0" width="144" height="40"/>
+                            <rect key="frame" x="87" y="0.0" width="138" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="ggv-dA-gxS"/>
+                                <constraint firstAttribute="height" constant="42" id="ggv-dA-gxS"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" image="space_bar">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-Iu-Viq" customClass="KeyboardButton" customModule="StickeroidKeyboard" customModuleProvider="target">
-                            <rect key="frame" x="232" y="0.0" width="72" height="40"/>
+                            <rect key="frame" x="243" y="0.0" width="69" height="42"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="IUR-zV-X5d"/>
+                                <constraint firstAttribute="height" constant="42" id="IUR-zV-X5d"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" image="search">
                                 <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="returnPressed:" destination="-1" eventType="touchUpInside" id="Cho-XR-eyY"/>
@@ -400,9 +462,9 @@
             <color key="backgroundColor" red="0.83429450964043805" green="0.84705882352941175" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="wlL-Pu-M9A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="1u5-9a-1QW"/>
-                <constraint firstItem="8ET-fp-Ydn" firstAttribute="top" secondItem="aei-AI-Z1T" secondAttribute="bottom" constant="8" id="3Zy-H4-pe0"/>
-                <constraint firstItem="jaP-ED-DPh" firstAttribute="top" secondItem="wlL-Pu-M9A" secondAttribute="bottom" constant="8" id="49F-34-uj4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ILV-FM-ucT" secondAttribute="trailing" constant="8" id="7Gd-aA-T27"/>
+                <constraint firstItem="8ET-fp-Ydn" firstAttribute="top" secondItem="aei-AI-Z1T" secondAttribute="bottom" constant="12" id="3Zy-H4-pe0"/>
+                <constraint firstItem="jaP-ED-DPh" firstAttribute="top" secondItem="wlL-Pu-M9A" secondAttribute="bottom" constant="12" id="49F-34-uj4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ILV-FM-ucT" secondAttribute="trailing" constant="4" id="7Gd-aA-T27"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wlL-Pu-M9A" secondAttribute="trailing" constant="8" id="8WK-tY-sxc"/>
                 <constraint firstItem="wlL-Pu-M9A" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DHc-oG-POD"/>
                 <constraint firstItem="8ET-fp-Ydn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Fl1-Y8-vwi"/>
@@ -410,19 +472,19 @@
                 <constraint firstItem="a0N-EI-cGu" firstAttribute="width" secondItem="Dbb-FL-s2F" secondAttribute="width" id="NAy-MR-Exp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="B81-ph-kaT" secondAttribute="trailing" constant="8" id="Qgm-Jn-sSd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aei-AI-Z1T" secondAttribute="trailing" constant="8" id="S3h-gc-Arw"/>
-                <constraint firstItem="8ET-fp-Ydn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="TFA-B7-NW8"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jaP-ED-DPh" secondAttribute="trailing" constant="8" id="WdM-5D-RAS"/>
-                <constraint firstItem="ILV-FM-ucT" firstAttribute="top" secondItem="8ET-fp-Ydn" secondAttribute="bottom" constant="8" id="WqQ-Z0-Mw3"/>
+                <constraint firstItem="8ET-fp-Ydn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="TFA-B7-NW8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jaP-ED-DPh" secondAttribute="trailing" constant="4" id="WdM-5D-RAS"/>
+                <constraint firstItem="ILV-FM-ucT" firstAttribute="top" secondItem="8ET-fp-Ydn" secondAttribute="bottom" constant="12" id="WqQ-Z0-Mw3"/>
                 <constraint firstItem="B81-ph-kaT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Xbb-oI-0oq"/>
                 <constraint firstItem="aei-AI-Z1T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="YHb-KK-gfK"/>
-                <constraint firstItem="aei-AI-Z1T" firstAttribute="top" secondItem="jaP-ED-DPh" secondAttribute="bottom" constant="8" id="dnY-2n-bwf"/>
+                <constraint firstItem="aei-AI-Z1T" firstAttribute="top" secondItem="jaP-ED-DPh" secondAttribute="bottom" constant="12" id="dnY-2n-bwf"/>
                 <constraint firstItem="B81-ph-kaT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ezQ-1f-0Wh"/>
-                <constraint firstItem="jaP-ED-DPh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="fKU-Zo-hR9"/>
+                <constraint firstItem="jaP-ED-DPh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="fKU-Zo-hR9"/>
                 <constraint firstItem="wlL-Pu-M9A" firstAttribute="top" secondItem="B81-ph-kaT" secondAttribute="bottom" constant="8" id="jzJ-SD-f3j"/>
                 <constraint firstItem="HdO-Sg-sDT" firstAttribute="width" secondItem="a0N-EI-cGu" secondAttribute="width" id="krU-If-n6E"/>
                 <constraint firstItem="aei-AI-Z1T" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lc0-Bg-URY"/>
-                <constraint firstItem="ILV-FM-ucT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="mEf-WX-J3P"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8ET-fp-Ydn" secondAttribute="trailing" constant="8" id="z0E-q9-hhM"/>
+                <constraint firstItem="ILV-FM-ucT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="mEf-WX-J3P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8ET-fp-Ydn" secondAttribute="trailing" constant="4" id="z0E-q9-hhM"/>
                 <constraint firstItem="jaP-ED-DPh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zAL-BZ-EK3"/>
                 <constraint firstItem="B81-ph-kaT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="zKP-7r-nCg"/>
             </constraints>

@@ -9,9 +9,10 @@
 import UIKit
 
 struct Constants {
-    static let LetterButtonTag = 1
-    static let KeyboardHeight: CGFloat = 320.0
-    static let CellReusabilityIdentifier = "StickeroidCell"
+    static let KeyboardHeight: CGFloat = 336.0
+    
     static let CollectionViewRows = 1
     
+    static let LetterButtonTag = 1
+    static let CellReusabilityIdentifier = "StickeroidCell"
 }

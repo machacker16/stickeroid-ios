@@ -22,7 +22,7 @@
 		755B2DF1205877CE00C34623 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755B2DEF205877CE00C34623 /* KeyboardView.xib */; };
 		755B2DF32059AC6C00C34623 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B2DF22059AC6C00C34623 /* KeyboardButton.swift */; };
 		755B2DF62059BF9300C34623 /* LetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B2DF52059BF9300C34623 /* LetterButton.swift */; };
-		755B2DF82066AF5300C34623 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B2DF72066AF5300C34623 /* Constants.swift */; };
+		755B2DF82066AF5300C34623 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B2DF72066AF5300C34623 /* UIConstants.swift */; };
 		7563FCCC20682C2300D1D361 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E91F33CA6D00DE7186 /* GCD.swift */; };
 		7591D5951F54A13E00E70522 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5941F54A13E00E70522 /* back.png */; };
 		7591D5971F54A14400E70522 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5961F54A14400E70522 /* next.png */; };
@@ -82,7 +82,7 @@
 		755B2DEF205877CE00C34623 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		755B2DF22059AC6C00C34623 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		755B2DF52059BF9300C34623 /* LetterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButton.swift; sourceTree = "<group>"; };
-		755B2DF72066AF5300C34623 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		755B2DF72066AF5300C34623 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		7563FCCD20682E2000D1D361 /* StickeroidKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StickeroidKeyboard.entitlements; sourceTree = "<group>"; };
 		7563FCCE20682E4400D1D361 /* Stickeroid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stickeroid.entitlements; sourceTree = "<group>"; };
 		7591D5941F54A13E00E70522 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -198,7 +198,6 @@
 				755B2DED2058779600C34623 /* Assets */,
 				754B44C6204F24F50004885F /* KeyboardViewController.swift */,
 				754B44C8204F24F50004885F /* Info.plist */,
-				755B2DF72066AF5300C34623 /* Constants.swift */,
 			);
 			path = StickeroidKeyboard;
 			sourceTree = "<group>";
@@ -242,6 +241,7 @@
 				755B2DF22059AC6C00C34623 /* KeyboardButton.swift */,
 				755B2DF52059BF9300C34623 /* LetterButton.swift */,
 				75C58B9D2085E26B004CA235 /* StickerCell.swift */,
+				755B2DF72066AF5300C34623 /* UIConstants.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				755B2DF62059BF9300C34623 /* LetterButton.swift in Sources */,
 				755B2DF32059AC6C00C34623 /* KeyboardButton.swift in Sources */,
 				754B44C7204F24F50004885F /* KeyboardViewController.swift in Sources */,
-				755B2DF82066AF5300C34623 /* Constants.swift in Sources */,
+				755B2DF82066AF5300C34623 /* UIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
