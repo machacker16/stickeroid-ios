@@ -28,6 +28,7 @@
 		7591D5971F54A14400E70522 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 7591D5961F54A14400E70522 /* next.png */; };
 		75A73F84206FAC4E0094138C /* RequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E11F31A6BB00DE7186 /* RequestConstants.swift */; };
 		75A73F85206FAC4E0094138C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550B1E31F31A74C00DE7186 /* Request.swift */; };
+		75BEF21F20A243390013FE55 /* SpaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BEF21E20A243390013FE55 /* SpaceButton.swift */; };
 		75C58B9E2085E26B004CA235 /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C58B9D2085E26B004CA235 /* StickerCell.swift */; };
 		75C58BA020868431004CA235 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C58B9F20868431004CA235 /* StickerCell.xib */; };
 		75D568A51F76C60F001EFD69 /* logo_text_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D568A41F76C60F001EFD69 /* logo_text_white.png */; };
@@ -87,6 +88,7 @@
 		7563FCCE20682E4400D1D361 /* Stickeroid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stickeroid.entitlements; sourceTree = "<group>"; };
 		7591D5941F54A13E00E70522 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		7591D5961F54A14400E70522 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		75BEF21E20A243390013FE55 /* SpaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceButton.swift; sourceTree = "<group>"; };
 		75C58B9D2085E26B004CA235 /* StickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
 		75C58B9F20868431004CA235 /* StickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
 		75D568A41F76C60F001EFD69 /* logo_text_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_text_white.png; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				755B2DF22059AC6C00C34623 /* KeyboardButton.swift */,
 				755B2DF52059BF9300C34623 /* LetterButton.swift */,
+				75BEF21E20A243390013FE55 /* SpaceButton.swift */,
 				75C58B9D2085E26B004CA235 /* StickerCell.swift */,
 				755B2DF72066AF5300C34623 /* UIConstants.swift */,
 			);
@@ -460,6 +463,7 @@
 				755B2DF32059AC6C00C34623 /* KeyboardButton.swift in Sources */,
 				754B44C7204F24F50004885F /* KeyboardViewController.swift in Sources */,
 				755B2DF82066AF5300C34623 /* UIConstants.swift in Sources */,
+				75BEF21F20A243390013FE55 /* SpaceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ struct Constants {
     static let KeyboardHeight: CGFloat = 336.0
     
     static let CollectionViewRows = 1
+    static let CollectionViewHeight = 70
     
     static let LetterButtonTag = 1
     static let CellReusabilityIdentifier = "StickeroidCell"

@@ -15,6 +15,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     var heightConstraint: NSLayoutConstraint?
     var lastQueryStickerUrls: [StickerURL]?
     
+    @IBOutlet weak var stickerViewHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var stickerCollectionView: UICollectionView!
     @IBOutlet weak var queryField: UITextField!
     
@@ -24,6 +26,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         loadKeyboardView()
+        setupKeyboardAppearance()
         
         self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: Constants.KeyboardHeight)
         
@@ -42,6 +45,9 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         keyboardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         inputView!.addSubview(keyboardView)
+    }
+    
+    func setupKeyboardAppearance() {
         inputView!.backgroundColor = keyboardView.backgroundColor
     }
     
@@ -135,6 +141,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
                     self?.stickerCollectionView.reloadData()
                 }
             }
+        
+        stickerCollectionView.layoutIfNeeded()
+        UIView.animate(withDuration: 1.0) { [weak self] in
+            self?.stickerViewHeightConstraint.constant = 0
+//            self?.stickerCollectionView.layoutIfNeeded()
+        }
     }
 }
 
