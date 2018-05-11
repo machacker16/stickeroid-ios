@@ -14,6 +14,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
     var lastQueryStickerUrls: [StickerURL]?
+    var isFirstSearch = false
     
     @IBOutlet weak var stickerViewHeightConstraint: NSLayoutConstraint!
     
@@ -27,8 +28,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         super.viewDidLoad()
         loadKeyboardView()
         setupKeyboardAppearance()
-        
-        self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: Constants.KeyboardHeight)
+        isFirstSearch = true
+        self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 0.0)
         
         stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
         stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
@@ -49,6 +50,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     
     func setupKeyboardAppearance() {
         inputView!.backgroundColor = keyboardView.backgroundColor
+        stickerViewHeightConstraint.constant = 0
     }
     
     func setupLetterButtons() {
@@ -67,18 +69,24 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     // MARK: Lifecycle callbacks
+    // TODO: check when this is called, why constraint must be created before?
     override func updateViewConstraints() {
         super.updateViewConstraints()
         
-        if (self.view.frame.size.width == 0 || self.view.frame.size.height == 0) {
+        if (view.frame.size.width == 0 || view.frame.size.height == 0) {
             return
         }
         
         if let heightConstraint = self.heightConstraint {
-            self.inputView?.removeConstraint(heightConstraint)
+            inputView?.removeConstraint(heightConstraint)
         }
-        self.heightConstraint!.constant = Constants.KeyboardHeight
-        self.inputView?.addConstraint(self.heightConstraint!)
+        
+        if (isFirstSearch) {
+            heightConstraint!.constant = Constants.KeyboardHeight - Constants.CollectionViewHeight
+        } else {
+            heightConstraint!.constant = Constants.KeyboardHeight
+        }
+        inputView?.addConstraint(self.heightConstraint!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -142,10 +150,14 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
                 }
             }
         
-        stickerCollectionView.layoutIfNeeded()
-        UIView.animate(withDuration: 1.0) { [weak self] in
-            self?.stickerViewHeightConstraint.constant = 0
-//            self?.stickerCollectionView.layoutIfNeeded()
+        if isFirstSearch {
+            isFirstSearch = false
+            self.view.layoutIfNeeded()
+            UIView.animate(withDuration: Constants.StickersRolloutDuration) { [weak self] in
+                self?.stickerViewHeightConstraint.constant = Constants.CollectionViewHeight
+                self?.heightConstraint?.constant = Constants.KeyboardHeight
+                self?.view.layoutIfNeeded()
+            }
         }
     }
 }

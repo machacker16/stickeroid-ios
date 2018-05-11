@@ -9,11 +9,12 @@
 import UIKit
 
 struct Constants {
+    // Height with collectionView shown
     static let KeyboardHeight: CGFloat = 336.0
     
     static let CollectionViewRows = 1
-    static let CollectionViewHeight = 70
-    
+    static let CollectionViewHeight: CGFloat = 70.0
+    static let StickersRolloutDuration = 0.35
     static let LetterButtonTag = 1
     static let CellReusabilityIdentifier = "StickeroidCell"
 }

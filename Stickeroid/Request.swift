@@ -126,7 +126,7 @@ class Request {
     }
     
     static fileprivate func buildBotRequestURL(searchQuery: String, numberOfStickers: Int) -> URL {
-        var resourceRequestParams = [
+        let resourceRequestParams = [
             RequestConstants.RequestKeys.NumberOfObjects: String(numberOfStickers),
             RequestConstants.RequestKeys.SecretKey: RequestConstants.RequestValues.SecretKey,
             RequestConstants.RequestKeys.ObjectWidth: RequestConstants.RequestValues.ObjectWidth,
