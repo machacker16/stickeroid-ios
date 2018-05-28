@@ -158,7 +158,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
                 self?.heightConstraint?.constant = Constants.KeyboardHeight
                 self?.view.layoutIfNeeded()
             }
-        }
+        }   
     }
 }
 
