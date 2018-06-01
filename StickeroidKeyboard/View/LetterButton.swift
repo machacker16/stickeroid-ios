@@ -35,7 +35,7 @@ class LetterButton: KeyboardButton {
     }
     
     func initLetterButton() {
-        self.tag = Constants.LetterButtonTag
+        self.tag = UIConstants.LetterButtonTag
         buttonStates[.LowerCase] = self.currentTitle!
         buttonStates[.UpperCase] = self.currentTitle!.uppercased()
     }

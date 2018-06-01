@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 class KeyboardViewController: UIInputViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
+
     var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
     var lastQueryStickerUrls: [StickerURL]?
@@ -31,8 +31,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         isFirstSearch = true
         self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 0.0)
         
-        stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
-        stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: Constants.CellReusabilityIdentifier)
+        stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
+        stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
         stickerCollectionView.dataSource = self
         stickerCollectionView.delegate = self
         
@@ -56,7 +56,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     func setupLetterButtons() {
         for row in self.keyboardView.subviews {
             for button in row.subviews {
-                if button.tag == Constants.LetterButtonTag {
+                if button.tag == UIConstants.LetterButtonTag {
                     let letterButton = button as! LetterButton
                     self.letterButtonsMap[letterButton.providedText] = letterButton
                 }
@@ -80,12 +80,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         if let heightConstraint = self.heightConstraint {
             inputView?.removeConstraint(heightConstraint)
         }
-        
-        if (isFirstSearch) {
-            heightConstraint!.constant = Constants.KeyboardHeight - Constants.CollectionViewHeight
-        } else {
-            heightConstraint!.constant = Constants.KeyboardHeight
-        }
+        heightConstraint!.constant = isFirstSearch ? UIConstants.KeyboardHeight - UIConstants.CollectionViewHeight : UIConstants.KeyboardHeight
+    
         inputView?.addConstraint(self.heightConstraint!)
     }
     
@@ -154,9 +150,9 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
             isFirstSearch = false
             self.view.layoutIfNeeded()
             
-            UIView.animate(withDuration: Constants.StickersRolloutDuration, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
-                    self?.stickerViewHeightConstraint.constant = Constants.CollectionViewHeight
-                    self?.heightConstraint?.constant = Constants.KeyboardHeight
+            UIView.animate(withDuration: UIConstants.StickersRolloutDuration, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
+                    self?.stickerViewHeightConstraint.constant = UIConstants.CollectionViewHeight
+                    self?.heightConstraint?.constant = UIConstants.KeyboardHeight
                     self?.view.layoutIfNeeded()
                 }, completion: nil)
 
@@ -171,7 +167,7 @@ extension KeyboardViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellReusabilityIdentifier, for: indexPath) as! StickerCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UIConstants.CellReusabilityIdentifier, for: indexPath) as! StickerCell
         
         guard let stickerURLs = lastQueryStickerUrls else {
             cell.imageView.image = #imageLiteral(resourceName: "stickeroid_logo.png")
@@ -180,7 +176,7 @@ extension KeyboardViewController {
         
         cell.layer.borderWidth = 2.0
         cell.layer.cornerRadius = 4.0
-        cell.layer.borderColor = Constants.StickeroidOrange.withAlphaComponent(0.0).cgColor
+        cell.layer.borderColor = UIConstants.StickeroidOrange.withAlphaComponent(0.0).cgColor
 
         if (indexPath.row < stickerURLs.count) {
             let thumbnailURL = stickerURLs[indexPath.row].0
@@ -222,16 +218,16 @@ extension KeyboardViewController {
     
     fileprivate func createStickerHighlightAnimation() -> CAAnimationGroup {
         let borderColorAnimation = CABasicAnimation(keyPath: "borderColor")
-        borderColorAnimation.fromValue = Constants.StickeroidOrange.withAlphaComponent(1.0).cgColor
-        borderColorAnimation.toValue = Constants.StickeroidOrange.withAlphaComponent(0.0).cgColor
+        borderColorAnimation.fromValue = UIConstants.StickeroidOrange.withAlphaComponent(1.0).cgColor
+        borderColorAnimation.toValue = UIConstants.StickeroidOrange.withAlphaComponent(0.0).cgColor
         
         let backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
-        backgroundColorAnimation.fromValue = Constants.StickeroidOrange.withAlphaComponent(0.5).cgColor
-        backgroundColorAnimation.toValue = Constants.StickeroidOrange.withAlphaComponent(0.0).cgColor
+        backgroundColorAnimation.fromValue = UIConstants.StickeroidOrange.withAlphaComponent(0.5).cgColor
+        backgroundColorAnimation.toValue = UIConstants.StickeroidOrange.withAlphaComponent(0.0).cgColor
         
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [borderColorAnimation, backgroundColorAnimation]
-        animationGroup.duration = Constants.StickerHighlightAnimationDuration
+        animationGroup.duration = UIConstants.StickerHighlightAnimationDuration
         animationGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         animationGroup.isRemovedOnCompletion = false
         animationGroup.fillMode = kCAFillModeForwards

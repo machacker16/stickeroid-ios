@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Constants {
+struct UIConstants {
     // Height with collectionView shown
     static let KeyboardHeight: CGFloat = 336.0
     

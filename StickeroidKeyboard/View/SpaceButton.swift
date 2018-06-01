@@ -8,7 +8,7 @@
 
 class SpaceButton: LetterButton {
     override func initLetterButton() {
-        self.tag = Constants.LetterButtonTag
+        self.tag = UIConstants.LetterButtonTag
         buttonStates[.LowerCase] = " "
         buttonStates[.UpperCase] = " "
     }
