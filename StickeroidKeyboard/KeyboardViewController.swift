@@ -43,8 +43,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         keyboardView.frame = self.view.bounds
         keyboardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        inputView!.backgroundColor = keyboardView.backgroundColor
         inputView!.addSubview(keyboardView)
+        inputView!.backgroundColor = keyboardView.backgroundColor
     }
     
     func setupKeyboardAppearance() {
