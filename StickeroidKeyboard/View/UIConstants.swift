@@ -14,7 +14,15 @@ struct Constants {
     
     static let CollectionViewRows = 1
     static let CollectionViewHeight: CGFloat = 70.0
-    static let StickersRolloutDuration = 0.35
+    
+    // Colors
+    static let StickeroidOrange = UIColor(red: 254.0/255.0, green: 220.0/255.0, blue: 67.0/255.0, alpha: 1.0)
+    
+    // Animations
+    static let StickersRolloutDuration = 0.25
+    static let StickerHighlightAnimationDuration = 0.75
+    
+    // Tags
     static let LetterButtonTag = 1
     static let CellReusabilityIdentifier = "StickeroidCell"
 }

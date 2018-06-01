@@ -153,11 +153,13 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         if isFirstSearch {
             isFirstSearch = false
             self.view.layoutIfNeeded()
-            UIView.animate(withDuration: Constants.StickersRolloutDuration) { [weak self] in
-                self?.stickerViewHeightConstraint.constant = Constants.CollectionViewHeight
-                self?.heightConstraint?.constant = Constants.KeyboardHeight
-                self?.view.layoutIfNeeded()
-            }
+            
+            UIView.animate(withDuration: Constants.StickersRolloutDuration, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
+                    self?.stickerViewHeightConstraint.constant = Constants.CollectionViewHeight
+                    self?.heightConstraint?.constant = Constants.KeyboardHeight
+                    self?.view.layoutIfNeeded()
+                }, completion: nil)
+
         }   
     }
 }
@@ -175,6 +177,10 @@ extension KeyboardViewController {
             cell.imageView.image = #imageLiteral(resourceName: "stickeroid_logo.png")
             return cell
         }
+        
+        cell.layer.borderWidth = 2.0
+        cell.layer.cornerRadius = 4.0
+        cell.layer.borderColor = Constants.StickeroidOrange.withAlphaComponent(0.0).cgColor
 
         if (indexPath.row < stickerURLs.count) {
             let thumbnailURL = stickerURLs[indexPath.row].0
@@ -199,6 +205,11 @@ extension KeyboardViewController {
             return
         }
         
+        // Border fading animation
+        let highlightAnimation = createStickerHighlightAnimation()
+        cell.layer.add(highlightAnimation, forKey: nil)
+        
+        // Copy to pasteboard
         URLSession.shared.dataTask(with: fullImageURL) { (data, response, error) in
             guard error == nil else {
                 print(error!)
@@ -207,6 +218,24 @@ extension KeyboardViewController {
             
             UIPasteboard.general.image = UIImage(data: data!)
         }.resume()
+    }
+    
+    fileprivate func createStickerHighlightAnimation() -> CAAnimationGroup {
+        let borderColorAnimation = CABasicAnimation(keyPath: "borderColor")
+        borderColorAnimation.fromValue = Constants.StickeroidOrange.withAlphaComponent(1.0).cgColor
+        borderColorAnimation.toValue = Constants.StickeroidOrange.withAlphaComponent(0.0).cgColor
         
+        let backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
+        backgroundColorAnimation.fromValue = Constants.StickeroidOrange.withAlphaComponent(0.5).cgColor
+        backgroundColorAnimation.toValue = Constants.StickeroidOrange.withAlphaComponent(0.0).cgColor
+        
+        let animationGroup = CAAnimationGroup()
+        animationGroup.animations = [borderColorAnimation, backgroundColorAnimation]
+        animationGroup.duration = Constants.StickerHighlightAnimationDuration
+        animationGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        animationGroup.isRemovedOnCompletion = false
+        animationGroup.fillMode = kCAFillModeForwards
+        
+        return animationGroup
     }
 }

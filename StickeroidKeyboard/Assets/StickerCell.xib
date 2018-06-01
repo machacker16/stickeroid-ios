@@ -20,15 +20,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="scc-Uo-GQo">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <rect key="frame" x="4" y="4" width="42" height="42"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="scc-Uo-GQo" firstAttribute="top" secondItem="At8-Db-OJF" secondAttribute="top" id="9Ob-uY-635"/>
-                <constraint firstAttribute="bottom" secondItem="scc-Uo-GQo" secondAttribute="bottom" id="ibX-6Z-wro"/>
-                <constraint firstItem="scc-Uo-GQo" firstAttribute="leading" secondItem="At8-Db-OJF" secondAttribute="leading" id="mpa-hf-xf3"/>
-                <constraint firstAttribute="trailing" secondItem="scc-Uo-GQo" secondAttribute="trailing" id="x1t-XX-bs9"/>
+                <constraint firstItem="scc-Uo-GQo" firstAttribute="top" secondItem="At8-Db-OJF" secondAttribute="top" constant="4" id="9Ob-uY-635"/>
+                <constraint firstAttribute="bottom" secondItem="scc-Uo-GQo" secondAttribute="bottom" constant="4" id="ibX-6Z-wro"/>
+                <constraint firstItem="scc-Uo-GQo" firstAttribute="leading" secondItem="At8-Db-OJF" secondAttribute="leading" constant="4" id="mpa-hf-xf3"/>
+                <constraint firstAttribute="trailing" secondItem="scc-Uo-GQo" secondAttribute="trailing" constant="4" id="x1t-XX-bs9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="6OM-06-A3h"/>
             <connections>
