@@ -16,8 +16,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     var lastQueryStickerUrls: [StickerURL]?
     var isFirstSearch = false
     
-    @IBOutlet weak var stickerViewHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var stickerCollectionView: UICollectionView!
     @IBOutlet weak var queryField: UITextField!
     
@@ -27,7 +25,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         loadKeyboardView()
-        setupKeyboardAppearance()
+        
         isFirstSearch = true
         self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 0.0)
         
@@ -45,12 +43,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         keyboardView.frame = self.view.bounds
         keyboardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
+        inputView!.backgroundColor = keyboardView.backgroundColor
         inputView!.addSubview(keyboardView)
     }
     
     func setupKeyboardAppearance() {
-        inputView!.backgroundColor = keyboardView.backgroundColor
-        stickerViewHeightConstraint.constant = 0
+        
     }
     
     func setupLetterButtons() {
@@ -80,7 +78,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         if let heightConstraint = self.heightConstraint {
             inputView?.removeConstraint(heightConstraint)
         }
-        heightConstraint!.constant = isFirstSearch ? UIConstants.KeyboardHeight - UIConstants.CollectionViewHeight : UIConstants.KeyboardHeight
+        heightConstraint!.constant = isFirstSearch ? UIConstants.KeyboardHeightCollectionViewHidden : UIConstants.KeyboardHeightCollectionVisible
     
         inputView?.addConstraint(self.heightConstraint!)
     }
@@ -148,12 +146,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         
         if isFirstSearch {
             isFirstSearch = false
-            self.view.layoutIfNeeded()
-            
+            self.inputView?.layoutIfNeeded()
+         
+            // TODO: doesn't animate
             UIView.animate(withDuration: UIConstants.StickersRolloutDuration, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
-                    self?.stickerViewHeightConstraint.constant = UIConstants.CollectionViewHeight
-                    self?.heightConstraint?.constant = UIConstants.KeyboardHeight
-                    self?.view.layoutIfNeeded()
+                    self?.heightConstraint?.constant = UIConstants.KeyboardHeightCollectionVisible
+                self?.inputView?.layoutIfNeeded()
                 }, completion: nil)
 
         }   

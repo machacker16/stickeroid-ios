@@ -9,8 +9,10 @@
 import UIKit
 
 struct UIConstants {
-    // Height with collectionView shown
-    static let KeyboardHeight: CGFloat = 336.0
+
+    static let StandardVerticalMargin: CGFloat = 8.0
+    static let KeyboardHeightCollectionVisible: CGFloat = 336.0
+    static let KeyboardHeightCollectionViewHidden: CGFloat = UIConstants.KeyboardHeightCollectionVisible - UIConstants.CollectionViewHeight - UIConstants.StandardVerticalMargin
     
     static let CollectionViewRows = 1
     static let CollectionViewHeight: CGFloat = 70.0
