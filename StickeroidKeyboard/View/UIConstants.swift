@@ -19,6 +19,7 @@ struct UIConstants {
     
     // Colors
     static let StickeroidOrange = UIColor(red: 254.0/255.0, green: 220.0/255.0, blue: 67.0/255.0, alpha: 1.0)
+    static let CellBackgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
     
     // Animations
     static let StickersRolloutDuration = 0.25

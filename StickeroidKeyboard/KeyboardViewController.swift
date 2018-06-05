@@ -11,7 +11,7 @@ import SDWebImage
 
 class KeyboardViewController: UIInputViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    var keyboardView: UIView!
+    weak var keyboardView: UIView!
     var heightConstraint: NSLayoutConstraint?
     var lastQueryStickerUrls: [StickerURL]?
     var isFirstSearch = false
@@ -27,28 +27,37 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         loadKeyboardView()
         
         isFirstSearch = true
-        self.heightConstraint = NSLayoutConstraint(item: self.inputView!, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 0.0)
+        guard let inputView = self.inputView else {
+            print("No inputView in viewDidLoad")
+            return
+        }
         
-        stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
-        stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
-        stickerCollectionView.dataSource = self
-        stickerCollectionView.delegate = self
+        self.heightConstraint = NSLayoutConstraint(item: inputView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 0.0)
         
+        setupCollectionView()
         setupLetterButtons()
     }
     
     func loadKeyboardView() {
         let keyboardViewNib = UINib(nibName: "KeyboardView", bundle: nil)
-        keyboardView = keyboardViewNib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        guard let keyboardView = keyboardViewNib.instantiate(withOwner: self, options: nil)[0] as? UIView else {
+            print("Coudn't instantiate keyboard view from nib")
+            return
+        }
+        
         keyboardView.frame = self.view.bounds
         keyboardView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
+        self.keyboardView = keyboardView
         inputView!.addSubview(keyboardView)
         inputView!.backgroundColor = keyboardView.backgroundColor
     }
     
-    func setupKeyboardAppearance() {
-        
+    func setupCollectionView() {
+        stickerCollectionView.register(StickerCell.self, forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
+        stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
+        stickerCollectionView.dataSource = self
+        stickerCollectionView.delegate = self
     }
     
     func setupLetterButtons() {
@@ -94,15 +103,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
-        
-//        var textColor: UIColor
-//        let proxy = self.textDocumentProxy
-//        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-//            textColor = UIColor.white
-//        } else {
-//            textColor = UIColor.black
-//        }
-//        self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
 
     // MARK: Button actions
@@ -172,10 +172,11 @@ extension KeyboardViewController {
             return cell
         }
         
-        cell.layer.borderWidth = 2.0
-        cell.layer.cornerRadius = 4.0
-        cell.layer.borderColor = UIConstants.StickeroidOrange.withAlphaComponent(0.0).cgColor
-
+        cell.layer.borderWidth = 1.5
+        cell.layer.cornerRadius = 3.0
+        cell.layer.borderColor = UIColor.gray.withAlphaComponent(0.65).cgColor
+        cell.layer.backgroundColor = UIConstants.CellBackgroundColor
+        
         if (indexPath.row < stickerURLs.count) {
             let thumbnailURL = stickerURLs[indexPath.row].0
             let fullImageURL = stickerURLs[indexPath.row].1
@@ -214,22 +215,15 @@ extension KeyboardViewController {
         }.resume()
     }
     
-    fileprivate func createStickerHighlightAnimation() -> CAAnimationGroup {
-        let borderColorAnimation = CABasicAnimation(keyPath: "borderColor")
-        borderColorAnimation.fromValue = UIConstants.StickeroidOrange.withAlphaComponent(1.0).cgColor
-        borderColorAnimation.toValue = UIConstants.StickeroidOrange.withAlphaComponent(0.0).cgColor
-        
+    fileprivate func createStickerHighlightAnimation() -> CABasicAnimation {
         let backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
-        backgroundColorAnimation.fromValue = UIConstants.StickeroidOrange.withAlphaComponent(0.5).cgColor
-        backgroundColorAnimation.toValue = UIConstants.StickeroidOrange.withAlphaComponent(0.0).cgColor
-        
-        let animationGroup = CAAnimationGroup()
-        animationGroup.animations = [borderColorAnimation, backgroundColorAnimation]
-        animationGroup.duration = UIConstants.StickerHighlightAnimationDuration
-        animationGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        animationGroup.isRemovedOnCompletion = false
-        animationGroup.fillMode = kCAFillModeForwards
-        
-        return animationGroup
+        backgroundColorAnimation.fromValue = UIConstants.StickeroidOrange.withAlphaComponent(0.75).cgColor
+        backgroundColorAnimation.toValue = UIConstants.CellBackgroundColor
+        backgroundColorAnimation.duration = UIConstants.StickerHighlightAnimationDuration
+        backgroundColorAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        backgroundColorAnimation.isRemovedOnCompletion = false
+        backgroundColorAnimation.fillMode = kCAFillModeForwards
+
+        return backgroundColorAnimation
     }
 }
