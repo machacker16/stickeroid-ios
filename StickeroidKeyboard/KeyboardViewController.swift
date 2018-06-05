@@ -24,16 +24,10 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadKeyboardView()
-        
         isFirstSearch = true
-        guard let inputView = self.inputView else {
-            print("No inputView in viewDidLoad")
-            return
-        }
         
-        self.heightConstraint = NSLayoutConstraint(item: inputView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 0.0)
-        
+        loadKeyboardView()
+        setupConstraints()
         setupCollectionView()
         setupLetterButtons()
     }
@@ -51,6 +45,17 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         self.keyboardView = keyboardView
         inputView!.addSubview(keyboardView)
         inputView!.backgroundColor = keyboardView.backgroundColor
+    }
+    
+    func setupConstraints() {
+        guard let inputView = self.inputView else {
+            print("No inputView in viewDidLoad")
+            return
+        }
+        
+        let keyboardHeight = isFirstSearch ? UIConstants.KeyboardHeightCollectionViewHidden : UIConstants.KeyboardHeightCollectionVisible
+        heightConstraint = NSLayoutConstraint(item: inputView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: keyboardHeight)
+        inputView.addConstraint(heightConstraint!)
     }
     
     func setupCollectionView() {
@@ -73,23 +78,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         for (_, button) in self.letterButtonsMap {
             button.addTarget(self, action: #selector(self.letterButtonPressed(_:)), for: .touchUpInside)
         }
-    }
-    
-    // MARK: Lifecycle callbacks
-    // TODO: check when this is called, why constraint must be created before?
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        
-        if (view.frame.size.width == 0 || view.frame.size.height == 0) {
-            return
-        }
-        
-        if let heightConstraint = self.heightConstraint {
-            inputView?.removeConstraint(heightConstraint)
-        }
-        heightConstraint!.constant = isFirstSearch ? UIConstants.KeyboardHeightCollectionViewHidden : UIConstants.KeyboardHeightCollectionVisible
-    
-        inputView?.addConstraint(self.heightConstraint!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -130,7 +118,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
     }
     
     @IBAction func returnPressed(_ sender: KeyboardButton) {
-        //TODO: create computed property for query, which automatically parses non-valid queries and returns nil
         guard let query = queryField.text else {
             return
         }
@@ -146,14 +133,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDataSource,
         
         if isFirstSearch {
             isFirstSearch = false
-            self.inputView?.layoutIfNeeded()
-         
-            // TODO: doesn't animate
-            UIView.animate(withDuration: UIConstants.StickersRolloutDuration, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
-                    self?.heightConstraint?.constant = UIConstants.KeyboardHeightCollectionVisible
-                self?.inputView?.layoutIfNeeded()
-                }, completion: nil)
-
+            heightConstraint?.constant = UIConstants.KeyboardHeightCollectionVisible
         }   
     }
 }
