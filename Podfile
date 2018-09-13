@@ -6,6 +6,6 @@ target 'Stickeroid' do
   pod 'SDWebImage', '~> 4.0'
 end
 
-target 'StickeroidKeyboard' do
+target 'Stickeroid MessagesExtension' do
   pod 'SDWebImage', '~> 4.0'
 end
