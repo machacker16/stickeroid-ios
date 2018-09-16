@@ -14,6 +14,14 @@
 		752B1413214AE80700214CC5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1412214AE80700214CC5 /* MessagesViewController.swift */; };
 		752B1416214AE80700214CC5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752B1414214AE80700214CC5 /* MainInterface.storyboard */; };
 		752B1418214AE80800214CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752B1417214AE80800214CC5 /* Assets.xcassets */; };
+		752B1425214AEF4300214CC5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1423214AEF4300214CC5 /* Request.swift */; };
+		752B1426214AEF4300214CC5 /* RequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1424214AEF4300214CC5 /* RequestConstants.swift */; };
+		75E379F3214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */; };
+		75E379F5214EA936009FD00A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F4214EA936009FD00A /* Constants.swift */; };
+		75E379F9214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */; };
+		75E379FC214EAB56009FD00A /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E379FB214EAB56009FD00A /* StickerCell.xib */; };
+		75E379FE214EAB5C009FD00A /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379FD214EAB5C009FD00A /* StickerCell.swift */; };
+		75E37A01214EC161009FD00A /* stickeroid_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E37A00214EC161009FD00A /* stickeroid_logo.png */; };
 		D10FA3E7666785BAE40DEE3E /* Pods_Stickeroid_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF661CC40D63DE5FD4DC178 /* Pods_Stickeroid_MessagesExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +62,14 @@
 		752B1415214AE80700214CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		752B1417214AE80800214CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		752B1419214AE80800214CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		752B1423214AEF4300214CC5 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		752B1424214AEF4300214CC5 /* RequestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConstants.swift; sourceTree = "<group>"; };
+		75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		75E379F4214EA936009FD00A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		75E379FB214EAB56009FD00A /* StickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
+		75E379FD214EAB5C009FD00A /* StickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
+		75E37A00214EC161009FD00A /* stickeroid_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickeroid_logo.png; sourceTree = "<group>"; };
 		80B83A136238C0417A955F33 /* Pods-Stickeroid MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeroid MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stickeroid MessagesExtension/Pods-Stickeroid MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		DAF661CC40D63DE5FD4DC178 /* Pods_Stickeroid_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickeroid_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F927222A48C46CA8A472EF1A /* Pods-Stickeroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stickeroid/Pods-Stickeroid.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,12 +138,52 @@
 		752B1411214AE80700214CC5 /* Stickeroid MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				752B1412214AE80700214CC5 /* MessagesViewController.swift */,
+				75E379FA214EAB39009FD00A /* View */,
+				75E379F6214EA959009FD00A /* Contoller */,
+				752B1427214AF70100214CC5 /* Model */,
+				75E379FF214EC11A009FD00A /* Assets */,
 				752B1414214AE80700214CC5 /* MainInterface.storyboard */,
 				752B1417214AE80800214CC5 /* Assets.xcassets */,
 				752B1419214AE80800214CC5 /* Info.plist */,
+				75E379F4214EA936009FD00A /* Constants.swift */,
 			);
 			path = "Stickeroid MessagesExtension";
+			sourceTree = "<group>";
+		};
+		752B1427214AF70100214CC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				752B1423214AEF4300214CC5 /* Request.swift */,
+				752B1424214AEF4300214CC5 /* RequestConstants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75E379F6214EA959009FD00A /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				752B1412214AE80700214CC5 /* MessagesViewController.swift */,
+				75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */,
+				75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		75E379FA214EAB39009FD00A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75E379FD214EAB5C009FD00A /* StickerCell.swift */,
+				75E379FB214EAB56009FD00A /* StickerCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		75E379FF214EC11A009FD00A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				75E37A00214EC161009FD00A /* stickeroid_logo.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		8BC3BD5F2E7F1AD3C7353944 /* Pods */ = {
@@ -233,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				752B1418214AE80800214CC5 /* Assets.xcassets in Resources */,
+				75E379FC214EAB56009FD00A /* StickerCell.xib in Resources */,
 				752B1416214AE80700214CC5 /* MainInterface.storyboard in Resources */,
+				75E37A01214EC161009FD00A /* stickeroid_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +359,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E379F9214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift in Sources */,
+				75E379F5214EA936009FD00A /* Constants.swift in Sources */,
+				75E379F3214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift in Sources */,
 				752B1413214AE80700214CC5 /* MessagesViewController.swift in Sources */,
+				752B1425214AEF4300214CC5 /* Request.swift in Sources */,
+				75E379FE214EAB5C009FD00A /* StickerCell.swift in Sources */,
+				752B1426214AEF4300214CC5 /* RequestConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,12 +510,18 @@
 			baseConfigurationReference = 13AF64177CB716C951C7B910 /* Pods-Stickeroid MessagesExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWKNWLSN4R;
 				INFOPLIST_FILE = "Stickeroid MessagesExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = stickeroid.la4ce.Stickeroid.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,12 +533,18 @@
 			baseConfigurationReference = 80B83A136238C0417A955F33 /* Pods-Stickeroid MessagesExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWKNWLSN4R;
 				INFOPLIST_FILE = "Stickeroid MessagesExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = stickeroid.la4ce.Stickeroid.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

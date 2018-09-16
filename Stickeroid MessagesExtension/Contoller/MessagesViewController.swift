@@ -9,11 +9,38 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    var lastQueryStickerUrls: [StickerURL]?
+    
+    @IBOutlet weak var stickerCollectionView: UICollectionView!
+    @IBOutlet weak var queryField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
+        stickerCollectionView.dataSource = self
+        stickerCollectionView.delegate = self
+    }
+    
+    func searchPressed() {
+        guard let query = queryField.text else {
+            return
+        }
+        
+        Request.getStickerURLsFor(searchQuery: query,
+                                  numberOfStickers: RequestConstants.ItemsPerRequest) { [weak self] (_ urls: [StickerURL]) in
+                                    self?.lastQueryStickerUrls = urls
+                                    
+                                    DispatchQueue.main.async { [weak self] in
+                                        self?.stickerCollectionView.reloadData()
+                                    }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,7 +49,6 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     // MARK: - Conversation Handling
-    
     override func willBecomeActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the inactive to active state.
         // This will happen when the extension is about to present UI.
@@ -68,5 +94,5 @@ class MessagesViewController: MSMessagesAppViewController {
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
     }
-
 }
+
