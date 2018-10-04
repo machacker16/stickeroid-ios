@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Messages
 
 extension MessagesViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -27,8 +28,19 @@ extension MessagesViewController {
                 return
             }
             
-            UIPasteboard.general.image = UIImage(data: data!)
-            }.resume()
+            let layout = MSMessageTemplateLayout()
+            layout.image = UIImage(data: data!)
+            
+            let message = MSMessage(session: MSSession())
+            message.layout = layout
+            
+            guard let conversation = self.activeConversation else { fatalError("Expected a conversation") }
+            
+            conversation.insert(message) { error in
+                if let error = error {
+                    print(error)
+                }
+            }
     }
     
     fileprivate func createStickerHighlightAnimation() -> CABasicAnimation {
