@@ -55,11 +55,10 @@ extension MessagesViewController {
     
     fileprivate func createStickerHighlightAnimation() -> CABasicAnimation {
         let backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
-        backgroundColorAnimation.fromValue = UIConstants.StickeroidOrange.withAlphaComponent(0.75).cgColor
-        backgroundColorAnimation.toValue = UIConstants.CellBackgroundColor
+        backgroundColorAnimation.fromValue = UIConstants.CellPressedBackgroundColor
+        backgroundColorAnimation.toValue = UIConstants.CellNormalBackgroundColor
         backgroundColorAnimation.duration = UIConstants.StickerHighlightAnimationDuration
         backgroundColorAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        backgroundColorAnimation.isRemovedOnCompletion = false
         backgroundColorAnimation.fillMode = kCAFillModeForwards
         
         return backgroundColorAnimation

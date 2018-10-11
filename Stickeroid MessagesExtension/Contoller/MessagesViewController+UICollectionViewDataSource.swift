@@ -22,11 +22,6 @@ extension MessagesViewController {
             return cell
         }
         
-//        cell.layer.borderWidth = 1.5
-//        cell.layer.cornerRadius = 3.0
-//        cell.layer.borderColor = UIColor.gray.withAlphaComponent(0.65).cgColor
-//        cell.layer.backgroundColor = UIConstants.CellBackgroundColor
-        
         if (indexPath.row < stickerURLs.count) {
             let thumbnailURL = stickerURLs[indexPath.row].0
             let fullImageURL = stickerURLs[indexPath.row].1

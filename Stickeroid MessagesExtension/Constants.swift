@@ -16,10 +16,11 @@ struct UIConstants {
     
     // Colors
     static let StickeroidOrange = UIColor(red: 254.0/255.0, green: 220.0/255.0, blue: 67.0/255.0, alpha: 1.0)
-    static let CellBackgroundColor = UIColor.gray.withAlphaComponent(0.2).cgColor
+    static let CellNormalBackgroundColor = UIColor.gray.withAlphaComponent(0.0).cgColor
+    static let CellPressedBackgroundColor = UIColor.gray.withAlphaComponent(0.25).cgColor
     
     // Animations
-    static let StickerHighlightAnimationDuration = 0.75
+    static let StickerHighlightAnimationDuration = 1.0
     
     // Tags
     static let CellReusabilityIdentifier = "StickeroidCell"
