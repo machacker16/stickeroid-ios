@@ -30,6 +30,9 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
     }
     
     func performSearch(searchQuery: String) {
+        lastQueryStickerUrls = nil
+        stickerCollectionView.reloadData()
+        
         Request.getStickerURLsFor(searchQuery: searchQuery,
                                   numberOfStickers: RequestConstants.ItemsPerRequest) { [weak self] (_ urls: [StickerURL]) in
                                     self?.lastQueryStickerUrls = urls
