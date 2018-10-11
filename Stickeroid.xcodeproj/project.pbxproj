@@ -13,9 +13,9 @@
 		752B1410214AE80700214CC5 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752B140F214AE80700214CC5 /* Messages.framework */; };
 		752B1413214AE80700214CC5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1412214AE80700214CC5 /* MessagesViewController.swift */; };
 		752B1416214AE80700214CC5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752B1414214AE80700214CC5 /* MainInterface.storyboard */; };
-		752B1418214AE80800214CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752B1417214AE80800214CC5 /* Assets.xcassets */; };
 		752B1425214AEF4300214CC5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1423214AEF4300214CC5 /* Request.swift */; };
 		752B1426214AEF4300214CC5 /* RequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1424214AEF4300214CC5 /* RequestConstants.swift */; };
+		758ED71B216E791400AD63FF /* ExtensionAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758ED71A216E791400AD63FF /* ExtensionAssets.xcassets */; };
 		75E379F3214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */; };
 		75E379F5214EA936009FD00A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F4214EA936009FD00A /* Constants.swift */; };
 		75E379F9214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */; };
@@ -60,10 +60,10 @@
 		752B140F214AE80700214CC5 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		752B1412214AE80700214CC5 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		752B1415214AE80700214CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		752B1417214AE80800214CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		752B1419214AE80800214CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752B1423214AEF4300214CC5 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		752B1424214AEF4300214CC5 /* RequestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConstants.swift; sourceTree = "<group>"; };
+		758ED71A216E791400AD63FF /* ExtensionAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ExtensionAssets.xcassets; sourceTree = "<group>"; };
 		75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		75E379F4214EA936009FD00A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 				752B1427214AF70100214CC5 /* Model */,
 				75E379FF214EC11A009FD00A /* Assets */,
 				752B1414214AE80700214CC5 /* MainInterface.storyboard */,
-				752B1417214AE80800214CC5 /* Assets.xcassets */,
 				752B1419214AE80800214CC5 /* Info.plist */,
 				75E379F4214EA936009FD00A /* Constants.swift */,
 			);
@@ -182,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				75E37A00214EC161009FD00A /* stickeroid_logo.png */,
+				758ED71A216E791400AD63FF /* ExtensionAssets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				752B1418214AE80800214CC5 /* Assets.xcassets in Resources */,
+				758ED71B216E791400AD63FF /* ExtensionAssets.xcassets in Resources */,
 				75E379FC214EAB56009FD00A /* StickerCell.xib in Resources */,
 				752B1416214AE80700214CC5 /* MainInterface.storyboard in Resources */,
 				75E37A01214EC161009FD00A /* stickeroid_logo.png in Resources */,
@@ -509,7 +509,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13AF64177CB716C951C7B910 /* Pods-Stickeroid MessagesExtension.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWKNWLSN4R;
@@ -532,7 +532,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80B83A136238C0417A955F33 /* Pods-Stickeroid MessagesExtension.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWKNWLSN4R;

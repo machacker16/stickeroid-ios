@@ -9,17 +9,17 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
+class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     
     var lastQueryStickerUrls: [StickerURL]?
     
     @IBOutlet weak var stickerCollectionView: UICollectionView!
-    @IBOutlet weak var queryField: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        queryField.delegate = self
+        searchBar.delegate = self
         setupCollectionView()
     }
     
@@ -29,12 +29,8 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
         stickerCollectionView.delegate = self
     }
     
-    func searchPressed() {
-        guard let query = queryField.text else {
-            return
-        }
-        
-        Request.getStickerURLsFor(searchQuery: query,
+    func performSearch(searchQuery: String) {
+        Request.getStickerURLsFor(searchQuery: searchQuery,
                                   numberOfStickers: RequestConstants.ItemsPerRequest) { [weak self] (_ urls: [StickerURL]) in
                                     self?.lastQueryStickerUrls = urls
                                     
@@ -46,13 +42,14 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
 }
 
 extension MessagesViewController {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         requestPresentationStyle(.expanded)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchPressed()
-        return true
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let query = searchBar.text {
+            performSearch(searchQuery: query)
+        }
     }
 }
     

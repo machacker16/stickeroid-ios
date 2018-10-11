@@ -10,6 +10,13 @@ import UIKit
 import Messages
 
 extension MessagesViewController {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200.0, height: 200.0)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = (collectionView.cellForItem(at: indexPath) as! StickerCell)
         
@@ -21,7 +28,9 @@ extension MessagesViewController {
         let highlightAnimation = createStickerHighlightAnimation()
         cell.layer.add(highlightAnimation, forKey: nil)
         
-        // Copy to pasteboard
+        self.requestPresentationStyle(.compact)
+        
+        // Compose a message
         URLSession.shared.dataTask(with: fullImageURL) { (data, response, error) in
             guard error == nil else {
                 print(error!)
@@ -41,6 +50,7 @@ extension MessagesViewController {
                     print(error)
                 }
             }
+        }.resume()
     }
     
     fileprivate func createStickerHighlightAnimation() -> CABasicAnimation {

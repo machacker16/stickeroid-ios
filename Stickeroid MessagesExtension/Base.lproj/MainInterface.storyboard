@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,18 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Do5-Mt-JOt" userLabel="Query Field">
-                                <rect key="frame" x="4" y="28" width="312" height="34"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="cUJ-8Q-zOr"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Search Stickers" translatesAutoresizingMaskIntoConstraints="NO" id="Axt-O1-SaM">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hWt-eF-9ng">
-                                <rect key="frame" x="0.0" y="78" width="320" height="450"/>
+                                <rect key="frame" x="4" y="76" width="312" height="448"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q3G-eU-Huf">
                                     <size key="itemSize" width="50" height="50"/>
@@ -42,20 +40,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="Do5-Mt-JOt" secondAttribute="trailing" constant="4" id="A1b-gX-Lhs"/>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="hWt-eF-9ng" secondAttribute="bottom" id="N9J-TE-Lfx"/>
-                            <constraint firstItem="Do5-Mt-JOt" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="8" id="OSb-Pu-FMo"/>
-                            <constraint firstItem="hWt-eF-9ng" firstAttribute="top" secondItem="Do5-Mt-JOt" secondAttribute="bottom" constant="16" id="Q41-qa-V3F"/>
-                            <constraint firstItem="hWt-eF-9ng" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="Sof-Hf-GOe"/>
-                            <constraint firstItem="Do5-Mt-JOt" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="4" id="W0O-TK-F7q"/>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="hWt-eF-9ng" secondAttribute="trailing" id="w3p-hC-qGr"/>
+                            <constraint firstItem="Axt-O1-SaM" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" id="KtB-KX-FZR"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="hWt-eF-9ng" secondAttribute="bottom" constant="4" id="N9J-TE-Lfx"/>
+                            <constraint firstItem="hWt-eF-9ng" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="4" id="Sof-Hf-GOe"/>
+                            <constraint firstItem="hWt-eF-9ng" firstAttribute="top" secondItem="Axt-O1-SaM" secondAttribute="bottom" id="YHz-Hb-rnK"/>
+                            <constraint firstItem="Axt-O1-SaM" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="f0i-wK-ovq"/>
+                            <constraint firstItem="Axt-O1-SaM" firstAttribute="trailing" secondItem="LDy-ih-0nr" secondAttribute="trailing" id="i7A-d0-Op5"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="hWt-eF-9ng" secondAttribute="trailing" constant="4" id="w3p-hC-qGr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
                     <connections>
-                        <outlet property="queryField" destination="Do5-Mt-JOt" id="Etd-y6-RcK"/>
+                        <outlet property="searchBar" destination="Axt-O1-SaM" id="blH-Ds-Dbp"/>
                         <outlet property="stickerCollectionView" destination="hWt-eF-9ng" id="qaY-yo-5m6"/>
                     </connections>
                 </viewController>
