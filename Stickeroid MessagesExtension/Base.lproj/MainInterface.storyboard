@@ -18,14 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Search Stickeroid" translatesAutoresizingMaskIntoConstraints="NO" id="Axt-O1-SaM">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vl9-sI-QKw" userLabel="Search Stack View">
                                 <rect key="frame" x="0.0" y="20" width="320" height="56"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rce-TP-9EG" userLabel="Wrapper View">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="56"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stickeroid_logo_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="NMF-O3-XbS" userLabel="Logo">
+                                                <rect key="frame" x="12" y="14" width="28" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="NMF-O3-XbS" secondAttribute="height" multiplier="1:1" id="qwH-ID-uxT"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NMF-O3-XbS" secondAttribute="bottom" constant="14" id="75E-3r-GkL"/>
+                                            <constraint firstItem="NMF-O3-XbS" firstAttribute="leading" secondItem="rce-TP-9EG" secondAttribute="leading" constant="12" id="Gzn-a4-CuG"/>
+                                            <constraint firstItem="NMF-O3-XbS" firstAttribute="top" secondItem="rce-TP-9EG" secondAttribute="top" constant="14" id="vtV-MQ-sVr"/>
+                                            <constraint firstAttribute="trailing" secondItem="NMF-O3-XbS" secondAttribute="trailing" constant="4" id="y5p-sm-oJS"/>
+                                        </constraints>
+                                    </view>
+                                    <searchBar contentMode="redraw" verticalHuggingPriority="1000" searchBarStyle="minimal" placeholder="Search Stickeroid..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axt-O1-SaM" customClass="SearchBar" customModule="Stickeroid_MessagesExtension" customModuleProvider="target">
+                                        <rect key="frame" x="44" y="0.0" width="276" height="56"/>
+                                        <offsetWrapper key="searchTextPositionAdjustment" horizontal="4" vertical="0.0"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rce-TP-9EG" firstAttribute="height" secondItem="Axt-O1-SaM" secondAttribute="height" id="gN2-HD-PHN"/>
+                                    <constraint firstItem="Axt-O1-SaM" firstAttribute="leading" secondItem="rce-TP-9EG" secondAttribute="trailing" id="ox3-Sy-orb"/>
+                                </constraints>
+                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hWt-eF-9ng">
                                 <rect key="frame" x="4" y="76" width="312" height="448"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,12 +68,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Axt-O1-SaM" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" id="KtB-KX-FZR"/>
+                            <constraint firstItem="hWt-eF-9ng" firstAttribute="top" secondItem="vl9-sI-QKw" secondAttribute="bottom" id="DgI-4o-MrV"/>
+                            <constraint firstItem="vl9-sI-QKw" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" id="MiM-hq-aac"/>
                             <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="hWt-eF-9ng" secondAttribute="bottom" constant="4" id="N9J-TE-Lfx"/>
                             <constraint firstItem="hWt-eF-9ng" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="4" id="Sof-Hf-GOe"/>
-                            <constraint firstItem="hWt-eF-9ng" firstAttribute="top" secondItem="Axt-O1-SaM" secondAttribute="bottom" id="YHz-Hb-rnK"/>
-                            <constraint firstItem="Axt-O1-SaM" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="f0i-wK-ovq"/>
-                            <constraint firstItem="Axt-O1-SaM" firstAttribute="trailing" secondItem="LDy-ih-0nr" secondAttribute="trailing" id="i7A-d0-Op5"/>
+                            <constraint firstItem="vl9-sI-QKw" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="VU7-1V-0fO"/>
+                            <constraint firstItem="vl9-sI-QKw" firstAttribute="trailing" secondItem="LDy-ih-0nr" secondAttribute="trailing" id="r6p-FX-ZHp"/>
                             <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="hWt-eF-9ng" secondAttribute="trailing" constant="4" id="w3p-hC-qGr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
@@ -62,4 +90,7 @@
             <point key="canvasLocation" x="32" y="33.283358320839582"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stickeroid_logo_small.png" width="200" height="200"/>
+    </resources>
 </document>

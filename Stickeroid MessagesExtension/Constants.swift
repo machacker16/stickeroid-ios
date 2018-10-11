@@ -15,7 +15,7 @@ struct UIConstants {
 //    static let CollectionViewRows = 1
     
     // Colors
-    static let StickeroidOrange = UIColor(red: 254.0/255.0, green: 220.0/255.0, blue: 67.0/255.0, alpha: 1.0)
+    static let StickeroidOrange = UIColor(red: 254.0/255.0, green: 143.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     static let CellNormalBackgroundColor = UIColor.gray.withAlphaComponent(0.0).cgColor
     static let CellPressedBackgroundColor = UIColor.gray.withAlphaComponent(0.25).cgColor
     

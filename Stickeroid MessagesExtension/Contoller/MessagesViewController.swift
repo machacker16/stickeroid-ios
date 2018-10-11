@@ -21,6 +21,7 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
         
         searchBar.delegate = self
         setupCollectionView()
+//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.blue
     }
     
     func setupCollectionView() {
