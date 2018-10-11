@@ -16,12 +16,12 @@
 		752B1425214AEF4300214CC5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1423214AEF4300214CC5 /* Request.swift */; };
 		752B1426214AEF4300214CC5 /* RequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752B1424214AEF4300214CC5 /* RequestConstants.swift */; };
 		758ED71B216E791400AD63FF /* ExtensionAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758ED71A216E791400AD63FF /* ExtensionAssets.xcassets */; };
+		758ED722216FCF4A00AD63FF /* placeholder_300px.png in Resources */ = {isa = PBXBuildFile; fileRef = 758ED721216FCF4A00AD63FF /* placeholder_300px.png */; };
 		75E379F3214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */; };
 		75E379F5214EA936009FD00A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F4214EA936009FD00A /* Constants.swift */; };
 		75E379F9214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */; };
 		75E379FC214EAB56009FD00A /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E379FB214EAB56009FD00A /* StickerCell.xib */; };
 		75E379FE214EAB5C009FD00A /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379FD214EAB5C009FD00A /* StickerCell.swift */; };
-		75E37A01214EC161009FD00A /* stickeroid_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E37A00214EC161009FD00A /* stickeroid_logo.png */; };
 		D10FA3E7666785BAE40DEE3E /* Pods_Stickeroid_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF661CC40D63DE5FD4DC178 /* Pods_Stickeroid_MessagesExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,12 +64,12 @@
 		752B1423214AEF4300214CC5 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		752B1424214AEF4300214CC5 /* RequestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConstants.swift; sourceTree = "<group>"; };
 		758ED71A216E791400AD63FF /* ExtensionAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ExtensionAssets.xcassets; sourceTree = "<group>"; };
+		758ED721216FCF4A00AD63FF /* placeholder_300px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_300px.png; sourceTree = "<group>"; };
 		75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		75E379F4214EA936009FD00A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		75E379FB214EAB56009FD00A /* StickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
 		75E379FD214EAB5C009FD00A /* StickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
-		75E37A00214EC161009FD00A /* stickeroid_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickeroid_logo.png; sourceTree = "<group>"; };
 		80B83A136238C0417A955F33 /* Pods-Stickeroid MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeroid MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stickeroid MessagesExtension/Pods-Stickeroid MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		DAF661CC40D63DE5FD4DC178 /* Pods_Stickeroid_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickeroid_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F927222A48C46CA8A472EF1A /* Pods-Stickeroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stickeroid/Pods-Stickeroid.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		75E379FF214EC11A009FD00A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				75E37A00214EC161009FD00A /* stickeroid_logo.png */,
+				758ED721216FCF4A00AD63FF /* placeholder_300px.png */,
 				758ED71A216E791400AD63FF /* ExtensionAssets.xcassets */,
 			);
 			path = Assets;
@@ -289,9 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				758ED71B216E791400AD63FF /* ExtensionAssets.xcassets in Resources */,
+				758ED722216FCF4A00AD63FF /* placeholder_300px.png in Resources */,
 				75E379FC214EAB56009FD00A /* StickerCell.xib in Resources */,
 				752B1416214AE80700214CC5 /* MainInterface.storyboard in Resources */,
-				75E37A01214EC161009FD00A /* stickeroid_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

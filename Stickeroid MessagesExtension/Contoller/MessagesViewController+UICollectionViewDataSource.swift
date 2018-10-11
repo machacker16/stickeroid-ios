@@ -18,7 +18,7 @@ extension MessagesViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UIConstants.CellReusabilityIdentifier, for: indexPath) as! StickerCell
         
         guard let stickerURLs = lastQueryStickerUrls else {
-            cell.imageView.image = #imageLiteral(resourceName: "stickeroid_logo.png")
+            cell.imageView.image = #imageLiteral(resourceName: "placeholder_300px.png")
             return cell
         }
         
