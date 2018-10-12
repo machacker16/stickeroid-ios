@@ -13,6 +13,7 @@ struct Constants {
 }
 
 struct UIConstants {
+    // Margins
     static let StandardVerticalMargin: CGFloat = 8.0
     
     // Colors
@@ -24,6 +25,9 @@ struct UIConstants {
     // Animations
     static let StickerHighlightAnimationDuration = 1.0
     
-    // Tags
+    // Misc
+    static let CollectionViewSectionsCount = 1
+    static let CollectionViewColumns: CGFloat = 4
+    static let CollectionViewSectionInsets = UIEdgeInsets(top: 4.0, left: 8.0, bottom: 32.0, right: 8.0)
     static let CellReusabilityIdentifier = "StickeroidCell"
 }

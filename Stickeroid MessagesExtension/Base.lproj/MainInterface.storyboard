@@ -55,7 +55,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hWt-eF-9ng">
-                                <rect key="frame" x="4" y="76" width="312" height="448"/>
+                                <rect key="frame" x="0.0" y="76" width="320" height="452"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q3G-eU-Huf">
                                     <size key="itemSize" width="50" height="50"/>
@@ -70,11 +70,11 @@
                         <constraints>
                             <constraint firstItem="hWt-eF-9ng" firstAttribute="top" secondItem="vl9-sI-QKw" secondAttribute="bottom" id="DgI-4o-MrV"/>
                             <constraint firstItem="vl9-sI-QKw" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" id="MiM-hq-aac"/>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="hWt-eF-9ng" secondAttribute="bottom" constant="4" id="N9J-TE-Lfx"/>
-                            <constraint firstItem="hWt-eF-9ng" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="4" id="Sof-Hf-GOe"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="hWt-eF-9ng" secondAttribute="bottom" id="N9J-TE-Lfx"/>
+                            <constraint firstItem="hWt-eF-9ng" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="Sof-Hf-GOe"/>
                             <constraint firstItem="vl9-sI-QKw" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="VU7-1V-0fO"/>
                             <constraint firstItem="vl9-sI-QKw" firstAttribute="trailing" secondItem="LDy-ih-0nr" secondAttribute="trailing" id="r6p-FX-ZHp"/>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="hWt-eF-9ng" secondAttribute="trailing" constant="4" id="w3p-hC-qGr"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="hWt-eF-9ng" secondAttribute="trailing" id="w3p-hC-qGr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
                     </view>

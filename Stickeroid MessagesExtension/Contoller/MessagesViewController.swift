@@ -9,7 +9,7 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
+class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     var lastQueryStickerUrls: [StickerURL]?
     
@@ -30,8 +30,8 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
         }
     }
     
-    override func willBecomeActive(with conversation: MSConversation) {
-        
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        stickerCollectionView.collectionViewLayout.invalidateLayout()
     }
     
     func setupCollectionView() {

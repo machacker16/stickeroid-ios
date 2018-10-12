@@ -19,6 +19,7 @@
 		758ED722216FCF4A00AD63FF /* placeholder_300px.png in Resources */ = {isa = PBXBuildFile; fileRef = 758ED721216FCF4A00AD63FF /* placeholder_300px.png */; };
 		758ED724216FDDD700AD63FF /* stickeroid_logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 758ED723216FDDD600AD63FF /* stickeroid_logo_small.png */; };
 		758ED726216FE7AD00AD63FF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758ED725216FE7AD00AD63FF /* SearchBar.swift */; };
+		758ED7282171220000AD63FF /* MessagesViewController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758ED7272171220000AD63FF /* MessagesViewController+UICollectionViewDelegateFlowLayout.swift */; };
 		75E379F3214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */; };
 		75E379F5214EA936009FD00A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F4214EA936009FD00A /* Constants.swift */; };
 		75E379F9214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */; };
@@ -69,6 +70,7 @@
 		758ED721216FCF4A00AD63FF /* placeholder_300px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_300px.png; sourceTree = "<group>"; };
 		758ED723216FDDD600AD63FF /* stickeroid_logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickeroid_logo_small.png; sourceTree = "<group>"; };
 		758ED725216FE7AD00AD63FF /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		758ED7272171220000AD63FF /* MessagesViewController+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		75E379F4214EA936009FD00A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				752B1412214AE80700214CC5 /* MessagesViewController.swift */,
 				75E379F2214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift */,
 				75E379F8214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift */,
+				758ED7272171220000AD63FF /* MessagesViewController+UICollectionViewDelegateFlowLayout.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				75E379F9214EA9A0009FD00A /* MessagesViewController+UICollectionViewDelegate.swift in Sources */,
 				75E379F5214EA936009FD00A /* Constants.swift in Sources */,
 				75E379F3214EA90D009FD00A /* MessagesViewController+UICollectionViewDataSource.swift in Sources */,
+				758ED7282171220000AD63FF /* MessagesViewController+UICollectionViewDelegateFlowLayout.swift in Sources */,
 				752B1413214AE80700214CC5 /* MessagesViewController.swift in Sources */,
 				752B1425214AEF4300214CC5 /* Request.swift in Sources */,
 				758ED726216FE7AD00AD63FF /* SearchBar.swift in Sources */,
