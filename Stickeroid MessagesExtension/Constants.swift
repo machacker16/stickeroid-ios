@@ -8,11 +8,12 @@
 
 import UIKit
 
+struct Constants {
+    static let DefaultRequestQuery = "hello";
+}
+
 struct UIConstants {
-    
     static let StandardVerticalMargin: CGFloat = 8.0
-    
-//    static let CollectionViewRows = 1
     
     // Colors
     static let StickeroidOrange = UIColor(red: 254.0/255.0, green: 143.0/255.0, blue: 0.0/255.0, alpha: 1.0)
