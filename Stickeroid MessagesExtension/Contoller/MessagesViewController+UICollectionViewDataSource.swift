@@ -28,14 +28,11 @@ extension MessagesViewController {
         }
         
         if (indexPath.row < stickerURLs.count) {
-//            let thumbnailURL = stickerURLs[indexPath.row].0
             let fullImageURL = stickerURLs[indexPath.row].1
-            
-//            cell.thumbnailURL = thumbnailURL
             cell.fullImageURL = fullImageURL
             
             // Library guarantees same URL won't be fetched twice
-            cell.stickerImageView.sd_setImage(with: cell.fullImageURL)
+            cell.stickerImageView.sd_setImage(with: cell.fullImageURL, placeholderImage: #imageLiteral(resourceName: "placeholder_300px.png"))
         }
         
         return cell
