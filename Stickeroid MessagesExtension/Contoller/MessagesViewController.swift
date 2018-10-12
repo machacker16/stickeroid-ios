@@ -21,7 +21,12 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
         
         searchBar.delegate = self
         setupCollectionView()
-//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = UIColor.blue
+    }
+    
+    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+        if presentationStyle == .expanded {
+            searchBar.becomeFirstResponder()
+        }
     }
     
     func setupCollectionView() {
@@ -95,18 +100,6 @@ extension MessagesViewController {
 //        // Called when the user deletes the message without sending it.
 //
 //        // Use this to clean up state related to the deleted message.
-//    }
-//
-//    override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-//        // Called before the extension transitions to a new presentation style.
-//
-//        // Use this method to prepare for the change in presentation style.
-//    }
-//
-//    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-//        // Called after the extension transitions to a new presentation style.
-//
-//        // Use this method to finalize any behaviors associated with the change in presentation style.
 //    }
 //}
 
