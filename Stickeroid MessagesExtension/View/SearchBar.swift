@@ -19,8 +19,8 @@ class SearchBar: UISearchBar {
         textFieldInsideSearchBar.borderStyle = .none
         
         textFieldInsideSearchBar.layer.borderWidth = 1.0
-        textFieldInsideSearchBar.layer.borderColor = UIColor.lightGray.cgColor
-        textFieldInsideSearchBar.layer.backgroundColor = UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0).cgColor
-        textFieldInsideSearchBar.layer.cornerRadius = 6.0
+        textFieldInsideSearchBar.layer.borderColor = UIConstants.StickeroidGray
+        textFieldInsideSearchBar.layer.backgroundColor = UIConstants.StickeroidGray
+        textFieldInsideSearchBar.layer.cornerRadius = 18.0
     }
 }

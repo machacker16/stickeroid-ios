@@ -40,7 +40,7 @@
                                     </view>
                                     <searchBar contentMode="redraw" verticalHuggingPriority="1000" searchBarStyle="minimal" placeholder="Search Stickeroid..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axt-O1-SaM" customClass="SearchBar" customModule="Stickeroid_MessagesExtension" customModuleProvider="target">
                                         <rect key="frame" x="44" y="0.0" width="276" height="56"/>
-                                        <offsetWrapper key="searchTextPositionAdjustment" horizontal="4" vertical="0.0"/>
+                                        <offsetWrapper key="searchTextPositionAdjustment" horizontal="6" vertical="0.0"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
                                         <scopeButtonTitles>
                                             <string>Title</string>
