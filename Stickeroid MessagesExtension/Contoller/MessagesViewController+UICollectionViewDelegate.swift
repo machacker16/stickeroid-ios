@@ -14,6 +14,11 @@ extension MessagesViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = (collectionView.cellForItem(at: indexPath) as! StickerCell)
         
+        guard cell.isLoaded else {
+            // TODO: try reloading
+            return
+        }
+        
         guard let stickerImage = cell.stickerImageView.image else {
             return
         }
@@ -46,8 +51,8 @@ extension MessagesViewController {
         backgroundColorAnimation.fromValue = UIConstants.CellPressedBackgroundColor
         backgroundColorAnimation.toValue = UIConstants.CellNormalBackgroundColor
         backgroundColorAnimation.duration = UIConstants.StickerHighlightAnimationDuration
-        backgroundColorAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        backgroundColorAnimation.fillMode = kCAFillModeForwards
+        backgroundColorAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        backgroundColorAnimation.fillMode = CAMediaTimingFillMode.forwards
         
         return backgroundColorAnimation
     }

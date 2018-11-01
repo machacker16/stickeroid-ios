@@ -66,7 +66,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hWt-eF-9ng" firstAttribute="top" secondItem="vl9-sI-QKw" secondAttribute="bottom" id="DgI-4o-MrV"/>
                             <constraint firstItem="vl9-sI-QKw" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" id="MiM-hq-aac"/>

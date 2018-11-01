@@ -38,6 +38,8 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
         stickerCollectionView.register(UINib(nibName: "StickerCell", bundle: .main), forCellWithReuseIdentifier: UIConstants.CellReusabilityIdentifier)
         stickerCollectionView.dataSource = self
         stickerCollectionView.delegate = self
+        
+        stickerCollectionView.contentInsetAdjustmentBehavior = .never
     }
     
     func performSearch(searchQuery: String) {

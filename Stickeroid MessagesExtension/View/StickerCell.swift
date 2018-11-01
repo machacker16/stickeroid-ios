@@ -13,4 +13,5 @@ class StickerCell: UICollectionViewCell {
     @IBOutlet weak var stickerImageView: UIImageView!
     
     var fullImageURL: URL?
+    var isLoaded = false
 }

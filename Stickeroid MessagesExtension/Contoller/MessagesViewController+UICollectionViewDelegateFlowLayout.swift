@@ -14,11 +14,13 @@ extension MessagesViewController {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let paddingSpace = UIConstants.CollectionViewSectionInsets.left * (UIConstants.CollectionViewColumns + 1)
+        let paddingSpace = UIConstants.CollectionViewSectionInsets.left * (UIConstants.CollectionViewDesiredColumns + 1)
         let availableWidth = collectionView.frame.width - paddingSpace
-        let widthPerItem = availableWidth / UIConstants.CollectionViewColumns - 2.0
+        let possibleItemWidth = availableWidth / UIConstants.CollectionViewDesiredColumns - 3.0
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        // clamping
+        let actualItemWidth = min(max(possibleItemWidth, UIConstants.CellMinSize), UIConstants.CellMaxSize)
+        return CGSize(width: actualItemWidth, height: actualItemWidth)
     }
     
     func collectionView(_ collectionView: UICollectionView,
