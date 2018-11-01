@@ -16,7 +16,11 @@ extension MessagesViewController {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return RequestConstants.ItemsPerRequest
+        guard let stickerUrls = self.lastQueryStickerUrls else {
+            return RequestConstants.ItemsPerRequest
+        }
+        
+        return stickerUrls.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

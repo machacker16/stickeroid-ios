@@ -83,7 +83,6 @@ class Request {
             
             var stickerURLs = [StickerURL]()
             for stickerData in stickersBundle {
-                //TODO: add checks
                 let stickerDataSafe = stickerData as! [String: Any]
                 var thumbnailURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Thumbnail] as! String
                 var imageURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Image] as! String
