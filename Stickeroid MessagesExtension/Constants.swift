@@ -28,7 +28,7 @@ struct UIConstants {
     static let CellPressedBackgroundColor = UIColor.gray.withAlphaComponent(0.25).cgColor
     
     // Animations
-    static let StickerHighlightAnimationDuration = 1.0
+    static let StickerHighlightAnimationDuration = 0.18
     
     // Misc
     static let CellReusabilityIdentifier = "StickeroidCell"

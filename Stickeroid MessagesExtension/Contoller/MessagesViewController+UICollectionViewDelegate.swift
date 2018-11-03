@@ -23,9 +23,9 @@ extension MessagesViewController {
             return
         }
         
-        // Border fading animation
-        let highlightAnimation = createStickerHighlightAnimation()
-        cell.layer.add(highlightAnimation, forKey: nil)
+        // Scaling animation
+        let transformAnimation = createStickerHighlightAnimation()
+        cell.stickerImageView.layer.add(transformAnimation, forKey: nil)
         
         // Shrink extension
         self.requestPresentationStyle(.compact)
@@ -47,13 +47,14 @@ extension MessagesViewController {
     }
     
     fileprivate func createStickerHighlightAnimation() -> CABasicAnimation {
-        let backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
-        backgroundColorAnimation.fromValue = UIConstants.CellPressedBackgroundColor
-        backgroundColorAnimation.toValue = UIConstants.CellNormalBackgroundColor
-        backgroundColorAnimation.duration = UIConstants.StickerHighlightAnimationDuration
-        backgroundColorAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
-        backgroundColorAnimation.fillMode = CAMediaTimingFillMode.forwards
+        let transformAnimation = CABasicAnimation(keyPath: "transform")
+        transformAnimation.fromValue = CATransform3DIdentity
+        transformAnimation.toValue = CATransform3DScale(CATransform3DIdentity, 0.85, 0.85, 1.0)
+        transformAnimation.duration = UIConstants.StickerHighlightAnimationDuration / 2.0
+        transformAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        transformAnimation.fillMode = CAMediaTimingFillMode.forwards
+        transformAnimation.autoreverses = true
         
-        return backgroundColorAnimation
+        return transformAnimation
     }
 }
