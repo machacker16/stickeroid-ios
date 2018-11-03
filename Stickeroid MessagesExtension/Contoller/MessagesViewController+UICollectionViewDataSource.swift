@@ -47,11 +47,27 @@ extension MessagesViewController {
                     guard error == nil else {
                         return
                     }
+                    cell.stickerImageView.layer.opacity = 1.0
+                    
+                    let animation = self.createStickerAppearanceAnimation()
+                    cell.stickerImageView.layer.add(animation, forKey: nil)
+                    
                     cell.isLoaded = true
                 }
             )
         }
         
         return cell
+    }
+    
+    func createStickerAppearanceAnimation() -> CABasicAnimation {
+        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
+        opacityAnimation.fromValue = 0.35
+        opacityAnimation.toValue = 1.0
+        opacityAnimation.duration = 0.34
+        opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        opacityAnimation.fillMode = CAMediaTimingFillMode.forwards
+        
+        return opacityAnimation
     }
 }
