@@ -63,6 +63,7 @@ extension MessagesViewController {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         if let query = searchBar.text {
             performSearch(searchQuery: query)
         }
