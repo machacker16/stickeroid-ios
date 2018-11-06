@@ -28,7 +28,7 @@ struct RequestConstants {
     }
     
     struct RequestValues {
-        static let SecretKey = "d147203e"
+        static let SecretKey = ""
         static let ObjectWidth = "512"
         static let NextQuery = ""
         static let PreviousQuery = ""
