@@ -75,21 +75,45 @@ class Request {
             
             let stickersBundle: [AnyObject]!
             do {
-                stickersBundle = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [AnyObject]
+                stickersBundle = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [AnyObject]
             } catch {
                 print("Could not parse retreived JSON root.")
                 return
             }
             
+            guard stickersBundle != nil else {
+                callback([])
+                return
+            }
+            
+            // TODO: refactor this in a proper way
             var stickerURLs = [StickerURL]()
             for stickerData in stickersBundle {
-                let stickerDataSafe = stickerData as! [String: Any]
-                var thumbnailURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Thumbnail] as! String
-                var imageURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Image] as! String
-                thumbnailURL = "\(Request.buildDomain())\(thumbnailURL)"
-                imageURL = "\(Request.buildDomain())\(imageURL)"
-                stickerURLs.append((URL(string: thumbnailURL)!, URL(string: imageURL)!))
+                let stickerDataCasted = stickerData as? [String: Any]
+                
+                guard let stickerDataSafe = stickerDataCasted else {
+                    callback([])
+                    return
+                }
+            
+                let thumbnailURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Thumbnail] as? String
+                guard var thumbnailURLSafe = thumbnailURL else {
+                    callback([])
+                    return
+                }
+                
+                let imageURL = stickerDataSafe[RequestConstants.StickerBundleJsonKeys.Image] as? String
+                guard var imageURLSafe = imageURL else {
+                    callback([])
+                    return
+                }
+                
+                thumbnailURLSafe = "\(Request.buildDomain())\(thumbnailURLSafe)"
+                imageURLSafe = "\(Request.buildDomain())\(imageURLSafe)"
+                
+                stickerURLs.append((URL(string: thumbnailURLSafe)!, URL(string: imageURLSafe)!))
             }
+            
             callback(stickerURLs)
         }
     }

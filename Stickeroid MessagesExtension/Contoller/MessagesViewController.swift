@@ -42,6 +42,10 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
         stickerCollectionView.contentInsetAdjustmentBehavior = .never
     }
     
+    func validateSearchQuery(_ query: String) -> String {
+        return query.replacingOccurrences(of: "[^\\p{L} ]", with: "", options: .regularExpression)
+    }
+    
     func performSearch(searchQuery: String) {
         lastQueryStickerUrls = nil
         stickerCollectionView.reloadData()
@@ -52,6 +56,10 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
                                     
                                     DispatchQueue.main.async { [weak self] in
                                         self?.stickerCollectionView.reloadData()
+                                    }
+                                    
+                                    if urls.count == 0 {
+                                        // displayNothingFoundSign()
                                     }
         }
     }
@@ -65,7 +73,12 @@ extension MessagesViewController {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if let query = searchBar.text {
-            performSearch(searchQuery: query)
+            let validatedQuery = validateSearchQuery(query)
+            guard validatedQuery != "" else {
+                return
+            }
+            
+            performSearch(searchQuery: validatedQuery)
         }
     }
 }
