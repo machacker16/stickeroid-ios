@@ -43,7 +43,8 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDataS
     }
     
     func validateSearchQuery(_ query: String) -> String {
-        return query.replacingOccurrences(of: "[^\\p{L} ]", with: "", options: .regularExpression)
+        var result = query.replacingOccurrences(of: "[^\\p{L} ]", with: "", options: .regularExpression)
+        return String(result.prefix(RequestConstants.MaxQueryLength))
     }
     
     func performSearch(searchQuery: String) {

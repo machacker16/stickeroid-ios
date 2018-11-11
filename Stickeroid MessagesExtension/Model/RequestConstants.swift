@@ -15,6 +15,7 @@ struct RequestConstants {
     static let APIHost = "stickeroid.com"
     static let SearchAPIPath = "/api"
     static let BotAPIPath = "/bot"
+    static let MaxQueryLength = 50
     
     struct RequestKeys {
         static let NumberOfObjects = "c"
