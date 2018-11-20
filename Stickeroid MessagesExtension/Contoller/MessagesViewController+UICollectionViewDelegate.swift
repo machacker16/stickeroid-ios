@@ -24,8 +24,8 @@ extension MessagesViewController {
         }
         
         // Scaling animation
-        let transformAnimation = createStickerHighlightAnimation()
-        cell.stickerImageView.layer.add(transformAnimation, forKey: nil)
+        let highlightAnimation = createStickerHighlightAnimation()
+        cell.stickerImageView.layer.add(highlightAnimation, forKey: nil)
         
         // Shrink extension
         self.requestPresentationStyle(.compact)
@@ -37,12 +37,23 @@ extension MessagesViewController {
         let message = MSMessage(session: MSSession())
         message.layout = layout
         
-        guard let conversation = self.activeConversation else { fatalError("Expected a conversation") }
+        guard let conversation = self.activeConversation else {
+            fatalError("Expected a conversation")
+        }
         
-        conversation.insert(message) { error in
-            if let error = error {
-                print(error)
+        let stickerPath = getDefaultStickerPath()
+        
+        saveImageToDisk(image: cell.stickerImageView.image!, path: stickerPath)
+        do {
+            let sticker = try MSSticker(contentsOfFileURL: URL(fileURLWithPath: stickerPath), localizedDescription: "place")
+            
+            conversation.insert(sticker) { error in
+                if let error = error {
+                    print(error)
+                }
             }
+        } catch let error {
+            print("Error info: \(error)")
         }
     }
     
@@ -56,5 +67,15 @@ extension MessagesViewController {
         transformAnimation.autoreverses = true
         
         return transformAnimation
+    }
+
+    fileprivate func saveImageToDisk(image: UIImage, path: String) {
+        let data = image.pngData()
+        FileManager.default.createFile(atPath: path, contents: data, attributes: nil)
+    }
+    
+    fileprivate func getDefaultStickerPath() -> String {
+        let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("sticker.png")
+        return path
     }
 }
