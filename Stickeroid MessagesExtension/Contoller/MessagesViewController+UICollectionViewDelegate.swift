@@ -43,18 +43,26 @@ extension MessagesViewController {
         
         let stickerPath = getDefaultStickerPath()
         
-        saveImageToDisk(image: cell.stickerImageView.image!, path: stickerPath)
-        do {
-            let sticker = try MSSticker(contentsOfFileURL: URL(fileURLWithPath: stickerPath), localizedDescription: "place")
-            
-            conversation.insert(sticker) { error in
-                if let error = error {
-                    print(error)
-                }
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard self.saveImageToDisk(image: cell.stickerImageView.image!, path: stickerPath) else {
+                print("Couldn't save image to disk")
+                return
             }
-        } catch let error {
-            print("Error info: \(error)")
+            
+            do {
+                let sticker = try MSSticker(contentsOfFileURL: URL(fileURLWithPath: stickerPath), localizedDescription: "place")
+                
+                conversation.insert(sticker) { error in
+                    if let error = error {
+                        print(error)
+                    }
+                }
+            } catch let error {
+                print("Error info: \(error)")
+                return
+            }
         }
+        
     }
     
     fileprivate func createStickerHighlightAnimation() -> CABasicAnimation {
@@ -69,9 +77,16 @@ extension MessagesViewController {
         return transformAnimation
     }
 
-    fileprivate func saveImageToDisk(image: UIImage, path: String) {
+    fileprivate func saveImageToDisk(image: UIImage, path: String) -> Bool{
         let data = image.pngData()
-        FileManager.default.createFile(atPath: path, contents: data, attributes: nil)
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            try data?.write(to: url)
+            return true
+        } catch {
+            return false
+        }
     }
     
     fileprivate func getDefaultStickerPath() -> String {
